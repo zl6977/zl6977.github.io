@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>KBE framework sequence diagram</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\lianz\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.3\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export" >
+      <div class="mume markdown-preview  "  >
+      <h1 class="mume-header" id="a-low-code-kbe-framework">A low-code KBE framework</h1>
+
+<h2 class="mume-header" id="some-reference">Some reference</h2>
+
+<p>The low code webinar and a brochure.<br>
+How the Composable Enterprise Will Accelerate Digital Transformation in the Automotive Industry[EB/OL]//Mendix. [2022-08-30]. <a href="https://www.mendix.com/resources/how-the-composable-enterprise-will-accelerate-digital-transformation-in-the-automotive-industry/">https://www.mendix.com/resources/how-the-composable-enterprise-will-accelerate-digital-transformation-in-the-automotive-industry/</a>.</p>
+<h3 class="mume-header" id="digitalisation-personnel">Digitalisation personnel</h3>
+
+<p>Gartner reports that</p>
+<ul>
+<li>business technologists&#x2014;employees who report outside of IT departments and create technology or analytics capabilities for work&#x2014;now make up <mark>41%</mark> of digital technologists.</li>
+<li>Another <mark>49%</mark> are technology end users,</li>
+<li>leaving only <mark>10%</mark> inside the IT department.</li>
+</ul>
+<h3 class="mume-header" id="how-does-the-manufacturing-team-create-its-personalized-application">How does the manufacturing team create its personalized application?</h3>
+
+<p>The low-code platform provides assembly tools for this task:</p>
+<ul>
+<li><mark>Templates</mark> are prepackaged frameworks that provide a starting point for the application. In a few simple visual steps, the template can be customized to address a specific need.</li>
+<li><mark>App services</mark> provide domain-specific building blocks packaged in cloud services.</li>
+<li><mark>Integrations</mark> enable users to reach specific data and pull it into a workflow or experience.</li>
+</ul>
+<h2 class="mume-header" id="the-purpose">The purpose</h2>
+
+<p>A low-code framwwork to automate the design process as much as possible, e.g.:</p>
+<ul>
+<li>rapid generate the variants of series products,</li>
+<li>integrate different tools,</li>
+<li>rapid generate the secondary components after the main components are determined,</li>
+<li>...</li>
+</ul>
+<h2 class="mume-header" id="some-expected-features">Some expected features</h2>
+
+<ul>
+<li>Flexible GUI, or low-code coordinator of orchestration</li>
+<li>SOA for integration of different tools</li>
+<li>Knowledge base for unified data storage</li>
+<li>...</li>
+</ul>
+<h2 class="mume-header" id="what-knowledge-to-capture">What knowledge to capture?</h2>
+
+<p>Before writing the application, what do the engineers have?<br>
+These are called raw files:</p>
+<ul>
+<li>the CAD model files (DFA file),</li>
+<li>some calaculation (excel, matlab/python scripts),</li>
+<li>CAE model files (Ansys, abaqus),</li>
+<li>some design reports.</li>
+</ul>
+<p>Geometric and non-geometric knowledge are contained in the raw files.</p>
+<h2 class="mume-header" id="how-to-formalize-what-does-the-knowledge-in-kb-look-like">How to formalize? What does the knowledge in KB look like?</h2>
+
+<p>Make the knowledge in those files <strong>semantic</strong>.<br>
+Maybe organised/ classified by sub-system or working group.<br>
+The knowledge is connected to each component.</p>
+<h2 class="mume-header" id="some-assumptions">Some assumptions</h2>
+
+<ul>
+<li>the CAD models are established in parametric formats, e.g. DFA file.</li>
+<li>the non-geometric parameters are stored in reports or ?</li>
+</ul>
+<h2 class="mume-header" id="the-difficulties">The difficulties</h2>
+
+<ol>
+<li>The magic 1</li>
+</ol>
+<ul>
+<li>How to formalise the knowledge in raw files.
+<ul>
+<li>The parameters:
+<ul>
+<li>the geometric parameters in CAD files</li>
+<li>the non-geometric parameters in reports ?</li>
+</ul>
+</li>
+<li>The rules(calculation) used to determine the parameters.</li>
+</ul>
+</li>
+<li>What forms are the knowledge stored? Or how to organise the knowledge?<br>
+<a href="#_How_to_formalise?_What_does_the_knowledge_in_KB_look_like?.md"># How to formalise? What does the knowledge in KB look like?</a></li>
+</ul>
+<ol start="2">
+<li>The magic 2</li>
+</ol>
+<ul>
+<li>How do the users use this application? How does the application interact with the user?</li>
+</ul>
+<h2 class="mume-header" id="the-architecture">The architecture</h2>
+
+<p><a href="https://app.diagrams.net/#G1xU_qLjZD-mErccbckfeYHtZaPTjxmR3K">https://app.diagrams.net/#G1xU_qLjZD-mErccbckfeYHtZaPTjxmR3K</a></p>
+<h2 class="mume-header" id="the-uml-sequence-diagram">The UML sequence diagram</h2>
+
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="1103px" preserveAspectRatio="none" style="width:1527px;height:1103px;background:#FFFFFF;" version="1.1" viewBox="0 0 1527 1103" width="1527px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="183.4609" style="stroke:#181818;stroke-width:1.0;" width="10" x="999" y="653.3438"/><rect fill="#FFFFFF" height="46.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1457" y="362.4766"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="71" x2="71" y1="82.6094" y2="1096.6172"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="195" x2="195" y1="82.6094" y2="1096.6172"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="570.5" x2="570.5" y1="82.6094" y2="1096.6172"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="761.5" x2="761.5" y1="82.6094" y2="1096.6172"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1003.5" x2="1003.5" y1="82.6094" y2="1096.6172"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1239" x2="1239" y1="82.6094" y2="1096.6172"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="1462" x2="1462" y1="82.6094" y2="1096.6172"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="126" x="5" y="79.5332">Developer/Engineer</text><ellipse cx="71" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M71,21.5 L71,48.5 M58,29.5 L84,29.5 M71,48.5 L58,63.5 M71,48.5 L84,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="147" y="79.5332">User/Engineer</text><ellipse cx="195" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M195,21.5 L195,48.5 M182,29.5 L208,29.5 M195,48.5 L182,63.5 M195,48.5 L208,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="97" x="522.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="83" x="529.5" y="71.5332">Web browser</text><rect fill="#E2E2F0" height="49.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="165" x="679.5" y="32.3906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="725.5" y="53.9238">http service</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="686.5" y="71.5332">(generate HTML of GUI)</text><rect fill="#E2E2F0" height="49.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="131" x="938.5" y="32.3906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="117" x="945.5" y="53.9238">application service</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="965" y="71.5332">(calculators)</text><rect fill="#E2E2F0" height="49.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="92" x="1193" y="32.3906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="1205.5" y="53.9238">file service</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="1200" y="71.5332">(calculators)</text><rect fill="#E2E2F0" height="49.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="1403" y="32.3906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="1410" y="53.9238">Knowledge base</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="1436" y="71.5332">(Fuseki)</text><rect fill="#FFFFFF" height="183.4609" style="stroke:#181818;stroke-width:1.0;" width="10" x="999" y="653.3438"/><rect fill="#FFFFFF" height="46.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="1457" y="362.4766"/><polygon fill="#181818" points="992,110.9609,1002,114.9609,992,118.9609" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="71" x2="998" y1="114.9609" y2="114.9609"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="355" x="78" y="110.1045">Upload the raw files of the prototype, (CAD models, reports?).</text><polygon fill="#181818" points="1450,157.6641,1460,161.6641,1450,165.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1004" x2="1456" y1="161.6641" y2="161.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="430" x="1011" y="140.4561">(The magic 1) The formalisation service extracts/formalises the knowledge,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="292" x="1015" y="156.8076">including geometric and non-geometric knowledge.</text><polygon fill="#181818" points="992,188.0156,1002,192.0156,992,196.0156" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="71" x2="998" y1="192.0156" y2="192.0156"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="228" x="78" y="187.1592">Convert the calculation to web services.</text><polygon fill="#181818" points="750,234.7188,760,238.7188,750,242.7188" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="71" x2="756" y1="238.7188" y2="238.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="246" x="78" y="217.5107">(The magic 2) Prepare the HTML template,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="249" x="82" y="233.8623">working as the coordinator of orchestration.</text><polygon fill="#181818" points="559,265.0703,569,269.0703,559,273.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="195" x2="565" y1="269.0703" y2="269.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="201" x="202" y="264.2139">Request GUI URL: /designer/partX.</text><polygon fill="#181818" points="750,295.4219,760,299.4219,750,303.4219" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="571" x2="756" y1="299.4219" y2="299.4219"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="578" y="294.5654">GET /designer/partX.</text><polygon fill="#181818" points="1445,358.4766,1455,362.4766,1445,366.4766" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="762" x2="1451" y1="362.4766" y2="362.4766"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="769" y="324.917">Send SPARQL to get</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="105" x="773" y="341.2686">the parameters for</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="168" x="773" y="357.6201">current GUI (/designer/partX).</text><polygon fill="#181818" points="773,405.1797,763,409.1797,773,413.1797" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="767" x2="1461" y1="409.1797" y2="409.1797"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="129" x="779" y="387.9717">Return the parameters</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="226" x="783" y="404.3232">(name and demo value) for current GUI.</text><line style="stroke:#181818;stroke-width:1.0;" x1="762" x2="804" y1="439.5313" y2="439.5313"/><line style="stroke:#181818;stroke-width:1.0;" x1="804" x2="804" y1="439.5313" y2="452.5313"/><line style="stroke:#181818;stroke-width:1.0;" x1="763" x2="804" y1="452.5313" y2="452.5313"/><polygon fill="#181818" points="773,448.5313,763,452.5313,773,456.5313" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="225" x="769" y="434.6748">Generate the HTML for /designer/partX.</text><polygon fill="#181818" points="582,478.8828,572,482.8828,582,486.8828" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="576" x2="761" y1="482.8828" y2="482.8828"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="146" x="588" y="478.0264">HTML for /designer/partX.</text><polygon fill="#181818" points="206,509.2344,196,513.2344,206,517.2344" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="200" x2="570" y1="513.2344" y2="513.2344"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="197" x="212" y="508.3779">Webpage(GUI) for /designer/partX.</text><polygon fill="#181818" points="559,539.5859,569,543.5859,559,547.5859" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="195" x2="565" y1="543.5859" y2="543.5859"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="202" y="538.7295">User clicks &quot;calculate/optimise&quot;.</text><polygon fill="#181818" points="750,602.6406,760,606.6406,750,610.6406" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="571" x2="756" y1="606.6406" y2="606.6406"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="578" y="569.0811">POST the parameters</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="582" y="585.4326">(name and input value)</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="582" y="601.7842">and the name of calculation.</text><polygon fill="#181818" points="987,649.3438,997,653.3438,987,657.3438" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="762" x2="993" y1="653.3438" y2="653.3438"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="203" x="769" y="632.1357">[SOAP] Call the calculation service</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="773" y="648.4873">using the parameter values.</text><line style="stroke:#181818;stroke-width:1.0;" x1="1009" x2="1051" y1="683.6953" y2="683.6953"/><line style="stroke:#181818;stroke-width:1.0;" x1="1051" x2="1051" y1="683.6953" y2="696.6953"/><line style="stroke:#181818;stroke-width:1.0;" x1="1010" x2="1051" y1="696.6953" y2="696.6953"/><polygon fill="#181818" points="1020,692.6953,1010,696.6953,1020,700.6953" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="1016" y="678.8389">Do the calculation.</text><polygon fill="#181818" points="1227,739.3984,1237,743.3984,1227,747.3984" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1009" x2="1233" y1="743.3984" y2="743.3984"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="1016" y="722.1904">The useful files generated,</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="202" x="1020" y="738.542">e.g. DFA file, preview figure, report.</text><polygon fill="#181818" points="1450,802.4531,1460,806.4531,1450,810.4531" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="1009" x2="1456" y1="806.4531" y2="806.4531"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="133" x="1016" y="768.8936">Send SPARQL to write</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="1020" y="785.2451">the parameters and result</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="116" x="1020" y="801.5967">into current product.</text><polygon fill="#181818" points="773,832.8047,763,836.8047,773,840.8047" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="767" x2="1003" y1="836.8047" y2="836.8047"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="141" x="779" y="831.9482">[SOAP] Send the result.</text><line style="stroke:#181818;stroke-width:1.0;" x1="762" x2="804" y1="867.1563" y2="867.1563"/><line style="stroke:#181818;stroke-width:1.0;" x1="804" x2="804" y1="867.1563" y2="880.1563"/><line style="stroke:#181818;stroke-width:1.0;" x1="763" x2="804" y1="880.1563" y2="880.1563"/><polygon fill="#181818" points="773,876.1563,763,880.1563,773,884.1563" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="228" x="769" y="862.2998">Generate the HTML for /designer/result.</text><polygon fill="#181818" points="582,906.5078,572,910.5078,582,914.5078" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="576" x2="761" y1="910.5078" y2="910.5078"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="149" x="588" y="905.6514">HTML for /designer/result.</text><polygon fill="#181818" points="206,936.8594,196,940.8594,206,944.8594" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="200" x2="570" y1="940.8594" y2="940.8594"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="200" x="212" y="936.0029">Webpage(GUI) for /designer/result.</text><polygon fill="#181818" points="559,967.2109,569,971.2109,559,975.2109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="195" x2="565" y1="971.2109" y2="971.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="352" x="202" y="966.3545">Click &quot;download XX files&quot;, e.g. DFA file, preview figure, report.</text><polygon fill="#181818" points="1227,997.5625,1237,1001.5625,1227,1005.5625" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="571" x2="1233" y1="1001.5625" y2="1001.5625"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="578" y="996.7061">GET XX files.</text><polygon fill="#181818" points="582,1027.9141,572,1031.9141,582,1035.9141" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="576" x2="1238" y1="1031.9141" y2="1031.9141"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="588" y="1027.0576">The files.</text><polygon fill="#181818" points="1450,1074.6172,1460,1078.6172,1450,1082.6172" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="195" x2="1456" y1="1078.6172" y2="1078.6172"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="360" x="202" y="1057.4092">Send SPARQL to add new parameters and properties into KB.</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="676" x="206" y="1073.7607">The properties are meta-data, related to GUI and calculation. This is why it is flexible: user not the developer can edit.</text><!--MD5=[a54542bdd3c42b952cc7c104996a7bf9]
+@startuml "A KBE framework scenario"
+' skinparam backgroundColor #EEEBDC
+skinparam handwritten false
+skinparam style strictuml
+
+'to request GUI for partX
+actor       "Developer/Engineer"    as developer
+actor       "User/Engineer"    as user
+participant "Web browser"    as client
+participant "http service\n(generate HTML of GUI)"    as httpServer
+participant "application service\n(calculators)"    as appServer
+participant "file service\n(calculators)"    as fileServer
+participant "Knowledge base\n(Fuseki)"    as KB
+
+'developing engineer prepare the knowledge
+'extract the parameters from files e.g., CAD and reports?
+developer -> appServer  : Upload the raw files of the prototype, (CAD models, reports?).
+appServer -> KB: (The magic 1) The formalisation service extracts/formalises the knowledge, \n including geometric and non-geometric knowledge.
+developer -> appServer  : Convert the calculation to web services.
+developer -> httpServer: (The magic 2) Prepare the HTML template, \n working as the coordinator of orchestration.
+
+'user rquest GUI
+user -> client  :  Request GUI URL: /designer/partX.
+client -> httpServer    :   GET /designer/partX.
+httpServer -> KB    :   Send SPARQL to get \n the parameters for \n current GUI (/designer/partX).
+activate KB
+KB -> httpServer    : Return the parameters \n (name and demo value) for current GUI.
+deactivate KB
+
+httpServer -> httpServer : Generate the HTML for /designer/partX.
+httpServer -> client : HTML for /designer/partX.
+client -> user: Webpage(GUI) for /designer/partX.
+
+'user clicks "calculate"
+user -> client  :   User clicks "calculate/optimise".
+client -> httpServer    :   POST the parameters \n (name and input value) \n and the name of calculation.
+
+httpServer -> appServer: [SOAP] Call the calculation service \n using the parameter values.
+
+activate appServer
+appServer -> appServer    :  Do the calculation.
+appServer -> fileServer : The useful files generated, \n e.g. DFA file, preview figure, report.
+appServer -> KB : Send SPARQL to write \n the parameters and result \n into current product.
+appServer -> httpServer : [SOAP] Send the result.
+deactivate appServer
+
+httpServer -> httpServer : Generate the HTML for /designer/result.
+httpServer -> client : HTML for /designer/result.
+client -> user: Webpage(GUI) for /designer/result.
+
+user -> client: Click "download XX files", e.g. DFA file, preview figure, report.
+client -> fileServer: GET XX files.
+fileServer -> client: The files.
+
+'user add new parameters for the parametric model
+user -> KB : Send SPARQL to add new parameters and properties into KB. \n The properties are meta-data, related to GUI and calculation. This is why it is flexible: user not the developer can edit.
+
+@enduml
+
+@startuml "A KBE framework scenario"
+skinparam handwritten false
+skinparam style strictuml
+
+actor       "Developer/Engineer"    as developer
+actor       "User/Engineer"    as user
+participant "Web browser"    as client
+participant "http service\n(generate HTML of GUI)"    as httpServer
+participant "application service\n(calculators)"    as appServer
+participant "file service\n(calculators)"    as fileServer
+participant "Knowledge base\n(Fuseki)"    as KB
+
+developer -> appServer  : Upload the raw files of the prototype, (CAD models, reports?).
+appServer -> KB: (The magic 1) The formalisation service extracts/formalises the knowledge, \n including geometric and non-geometric knowledge.
+developer -> appServer  : Convert the calculation to web services.
+developer -> httpServer: (The magic 2) Prepare the HTML template, \n working as the coordinator of orchestration.
+
+user -> client  :  Request GUI URL: /designer/partX.
+client -> httpServer    :   GET /designer/partX.
+httpServer -> KB    :   Send SPARQL to get \n the parameters for \n current GUI (/designer/partX).
+activate KB
+KB -> httpServer    : Return the parameters \n (name and demo value) for current GUI.
+deactivate KB
+
+httpServer -> httpServer : Generate the HTML for /designer/partX.
+httpServer -> client : HTML for /designer/partX.
+client -> user: Webpage(GUI) for /designer/partX.
+
+user -> client  :   User clicks "calculate/optimise".
+client -> httpServer    :   POST the parameters \n (name and input value) \n and the name of calculation.
+
+httpServer -> appServer: [SOAP] Call the calculation service \n using the parameter values.
+
+activate appServer
+appServer -> appServer    :  Do the calculation.
+appServer -> fileServer : The useful files generated, \n e.g. DFA file, preview figure, report.
+appServer -> KB : Send SPARQL to write \n the parameters and result \n into current product.
+appServer -> httpServer : [SOAP] Send the result.
+deactivate appServer
+
+httpServer -> httpServer : Generate the HTML for /designer/result.
+httpServer -> client : HTML for /designer/result.
+client -> user: Webpage(GUI) for /designer/result.
+
+user -> client: Click "download XX files", e.g. DFA file, preview figure, report.
+client -> fileServer: GET XX files.
+fileServer -> client: The files.
+
+user -> KB : Send SPARQL to add new parameters and properties into KB. \n The properties are meta-data, related to GUI and calculation. This is why it is flexible: user not the developer can edit.
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg></p><hr>
+<ul>
+<li>The order making scenario</li>
+</ul>
+<p><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--><svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" contentstyletype="text/css" height="1285px" preserveAspectRatio="none" style="width:705px;height:1285px;background:#FFFFFF;" version="1.1" viewBox="0 0 705 1285" width="705px" zoomAndPan="magnify"><defs/><g><rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="451.5" y="161.6641"/><rect fill="#FFFFFF" height="471.3281" style="stroke:#181818;stroke-width:1.0;" width="10" x="451.5" y="342.7734"/><rect fill="#FFFFFF" height="259.5156" style="stroke:#181818;stroke-width:1.0;" width="10" x="451.5" y="954.2109"/><rect fill="#FFFFFF" height="106.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="628.5" y="535.8828"/><rect fill="#FFFFFF" height="90.0547" style="stroke:#181818;stroke-width:1.0;" width="10" x="628.5" y="1000.9141"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="38" x2="38" y1="82.6094" y2="1278.4297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="260.5" x2="260.5" y1="82.6094" y2="1278.4297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="456.5" x2="456.5" y1="82.6094" y2="1278.4297"/><line style="stroke:#181818;stroke-width:0.5;stroke-dasharray:5.0,5.0;" x1="633.5" x2="633.5" y1="82.6094" y2="1278.4297"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="5" y="79.5332">Customer</text><ellipse cx="38.5" cy="13.5" fill="#E2E2F0" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><path d="M38.5,21.5 L38.5,48.5 M25.5,29.5 L51.5,29.5 M38.5,48.5 L25.5,63.5 M38.5,48.5 L51.5,63.5 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><rect fill="#E2E2F0" height="66.8281" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="209.5" y="14.7813"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="242.5" y="36.3145">Client</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="216.5" y="53.9238">(Web browser</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="239" y="71.5332">&amp;CAD)</text><rect fill="#E2E2F0" height="31.6094" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="102" x="405.5" y="50"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="88" x="412.5" y="71.5332">Design server</text><rect fill="#E2E2F0" height="49.2188" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="118" x="574.5" y="32.3906"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="104" x="581.5" y="53.9238">Knowledge base</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="52" x="607.5" y="71.5332">(Fuseki)</text><rect fill="#FFFFFF" height="73.7031" style="stroke:#181818;stroke-width:1.0;" width="10" x="451.5" y="161.6641"/><rect fill="#FFFFFF" height="471.3281" style="stroke:#181818;stroke-width:1.0;" width="10" x="451.5" y="342.7734"/><rect fill="#FFFFFF" height="259.5156" style="stroke:#181818;stroke-width:1.0;" width="10" x="451.5" y="954.2109"/><rect fill="#FFFFFF" height="106.4063" style="stroke:#181818;stroke-width:1.0;" width="10" x="628.5" y="535.8828"/><rect fill="#FFFFFF" height="90.0547" style="stroke:#181818;stroke-width:1.0;" width="10" x="628.5" y="1000.9141"/><polygon fill="#181818" points="248.5,127.3125,258.5,131.3125,248.5,135.3125" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="254.5" y1="131.3125" y2="131.3125"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="45.5" y="110.1045">http://127.0.0.1:1234</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="45.5" y="126.4561">http://127.0.0.1:1234/pipe_router</text><polygon fill="#181818" points="439.5,157.6641,449.5,161.6641,439.5,165.6641" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="260.5" x2="445.5" y1="161.6641" y2="161.6641"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="267.5" y="156.8076">GET /pipe_router</text><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="503.5" y1="192.0156" y2="192.0156"/><line style="stroke:#181818;stroke-width:1.0;" x1="503.5" x2="503.5" y1="192.0156" y2="205.0156"/><line style="stroke:#181818;stroke-width:1.0;" x1="462.5" x2="503.5" y1="205.0156" y2="205.0156"/><polygon fill="#181818" points="472.5,201.0156,462.5,205.0156,472.5,209.0156" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="468.5" y="187.1592">Do_GET(self)</text><polygon fill="#181818" points="271.5,231.3672,261.5,235.3672,271.5,239.3672" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="265.5" x2="455.5" y1="235.3672" y2="235.3672"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="277.5" y="230.5107">HTML for /pipe_router</text><polygon fill="#181818" points="49.5,261.7188,39.5,265.7188,49.5,269.7188" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="43.5" x2="259.5" y1="265.7188" y2="265.7188"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="145" x="55.5" y="260.8623">web page for /pipe_router</text><polygon fill="#181818" points="248.5,292.0703,258.5,296.0703,248.5,300.0703" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="254.5" y1="296.0703" y2="296.0703"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="198" x="45.5" y="291.2139">Input and submit parameter values</text><polygon fill="#181818" points="439.5,338.7734,449.5,342.7734,439.5,346.7734" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="260.5" x2="445.5" y1="342.7734" y2="342.7734"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="107" x="267.5" y="321.5654">POST /pipe_router</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="115" x="271.5" y="337.917">?paras=InputValues</text><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="503.5" y1="373.125" y2="373.125"/><line style="stroke:#181818;stroke-width:1.0;" x1="503.5" x2="503.5" y1="373.125" y2="386.125"/><line style="stroke:#181818;stroke-width:1.0;" x1="462.5" x2="503.5" y1="386.125" y2="386.125"/><polygon fill="#181818" points="472.5,382.125,462.5,386.125,472.5,390.125" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="86" x="468.5" y="368.2686">Do_POST(self)</text><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="503.5" y1="416.4766" y2="416.4766"/><line style="stroke:#181818;stroke-width:1.0;" x1="503.5" x2="503.5" y1="416.4766" y2="429.4766"/><line style="stroke:#181818;stroke-width:1.0;" x1="462.5" x2="503.5" y1="429.4766" y2="429.4766"/><polygon fill="#181818" points="472.5,425.4766,462.5,429.4766,472.5,433.4766" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="101" x="468.5" y="411.6201">parse parameters</text><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="503.5" y1="476.1797" y2="476.1797"/><line style="stroke:#181818;stroke-width:1.0;" x1="503.5" x2="503.5" y1="476.1797" y2="489.1797"/><line style="stroke:#181818;stroke-width:1.0;" x1="462.5" x2="503.5" y1="489.1797" y2="489.1797"/><polygon fill="#181818" points="472.5,485.1797,462.5,489.1797,472.5,493.1797" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="112" x="468.5" y="454.9717">call GA to generate</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="472.5" y="471.3232">the best solution</text><polygon fill="#181818" points="616.5,531.8828,626.5,535.8828,616.5,539.8828" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="622.5" y1="535.8828" y2="535.8828"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="468.5" y="514.6748">POST /update</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="147" x="468.5" y="531.0264">?paras=parametric model</text><line style="stroke:#181818;stroke-width:1.0;" x1="638.5" x2="680.5" y1="582.5859" y2="582.5859"/><line style="stroke:#181818;stroke-width:1.0;" x1="680.5" x2="680.5" y1="582.5859" y2="595.5859"/><line style="stroke:#181818;stroke-width:1.0;" x1="639.5" x2="680.5" y1="595.5859" y2="595.5859"/><polygon fill="#181818" points="649.5,591.5859,639.5,595.5859,649.5,599.5859" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="645.5" y="561.3779">SPARQL</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="39" x="649.5" y="577.7295">update</text><polygon fill="#181818" points="472.5,638.2891,462.5,642.2891,472.5,646.2891" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="466.5" x2="632.5" y1="642.2891" y2="642.2891"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="50" x="478.5" y="621.0811">result for</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="96" x="478.5" y="637.4326">SPARQL update</text><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="503.5" y1="738.0469" y2="738.0469"/><line style="stroke:#181818;stroke-width:1.0;" x1="503.5" x2="503.5" y1="738.0469" y2="751.0469"/><line style="stroke:#181818;stroke-width:1.0;" x1="462.5" x2="503.5" y1="751.0469" y2="751.0469"/><polygon fill="#181818" points="472.5,747.0469,462.5,751.0469,472.5,755.0469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="118" x="468.5" y="667.7842">generate the models</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="82" x="468.5" y="684.1357">represented in</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="127" x="468.5" y="700.4873">DFA, MAC, javaScript</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="79" x="468.5" y="716.8389">from template</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="135" x="468.5" y="733.1904">and return the webpage</text><polygon fill="#181818" points="271.5,810.1016,261.5,814.1016,271.5,818.1016" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="265.5" x2="455.5" y1="814.1016" y2="814.1016"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="277.5" y="776.542">viewer HTML for /pipe_router</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="281.5" y="792.8936">containing the model in</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="277.5" y="809.2451">DFA, MAC and JavaScript</text><polygon fill="#181818" points="49.5,856.8047,39.5,860.8047,49.5,864.8047" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="43.5" x2="259.5" y1="860.8047" y2="860.8047"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="55.5" y="839.5967">The visualized model</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="59.5" y="855.9482">and DFA, MAC file</text><polygon fill="#181818" points="248.5,903.5078,258.5,907.5078,248.5,911.5078" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="38.5" x2="254.5" y1="907.5078" y2="907.5078"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="159" x="45.5" y="886.2998">http://127.0.0.1:1234/viewer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="45.5" y="902.6514">?productID=p001</text><polygon fill="#181818" points="439.5,950.2109,449.5,954.2109,439.5,958.2109" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="260.5" x2="445.5" y1="954.2109" y2="954.2109"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="69" x="267.5" y="933.0029">GET /viewer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="271.5" y="949.3545">?productID=p001</text><polygon fill="#181818" points="616.5,996.9141,626.5,1000.9141,616.5,1004.9141" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="622.5" y1="1000.9141" y2="1000.9141"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="75" x="468.5" y="979.7061">POST /query</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="102" x="472.5" y="996.0576">?paras=productID</text><line style="stroke:#181818;stroke-width:1.0;" x1="638.5" x2="680.5" y1="1047.6172" y2="1047.6172"/><line style="stroke:#181818;stroke-width:1.0;" x1="680.5" x2="680.5" y1="1047.6172" y2="1060.6172"/><line style="stroke:#181818;stroke-width:1.0;" x1="639.5" x2="680.5" y1="1060.6172" y2="1060.6172"/><polygon fill="#181818" points="649.5,1056.6172,639.5,1060.6172,649.5,1064.6172" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="53" x="645.5" y="1026.4092">SPARQL</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="32" x="649.5" y="1042.7607">query</text><polygon fill="#181818" points="472.5,1086.9688,462.5,1090.9688,472.5,1094.9688" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="466.5" x2="632.5" y1="1090.9688" y2="1090.9688"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="143" x="478.5" y="1086.1123">result for SPARQL query</text><line style="stroke:#181818;stroke-width:1.0;" x1="461.5" x2="503.5" y1="1137.6719" y2="1137.6719"/><line style="stroke:#181818;stroke-width:1.0;" x1="503.5" x2="503.5" y1="1137.6719" y2="1150.6719"/><line style="stroke:#181818;stroke-width:1.0;" x1="462.5" x2="503.5" y1="1150.6719" y2="1150.6719"/><polygon fill="#181818" points="472.5,1146.6719,462.5,1150.6719,472.5,1154.6719" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="90" x="468.5" y="1116.4639">parse the result</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="126" x="472.5" y="1132.8154">to generate the model</text><polygon fill="#181818" points="271.5,1209.7266,261.5,1213.7266,271.5,1217.7266" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="265.5" x2="455.5" y1="1213.7266" y2="1213.7266"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="163" x="277.5" y="1176.167">viewer HTML for /pipe_router</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="134" x="277.5" y="1192.5186">containing the model in</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="151" x="277.5" y="1208.8701">DFA, MAC and JavaScript</text><polygon fill="#181818" points="49.5,1256.4297,39.5,1260.4297,49.5,1264.4297" style="stroke:#181818;stroke-width:1.0;"/><line style="stroke:#181818;stroke-width:1.0;stroke-dasharray:2.0,2.0;" x1="43.5" x2="259.5" y1="1260.4297" y2="1260.4297"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="120" x="55.5" y="1239.2217">The visualized model</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="108" x="59.5" y="1255.5732">and DFA, MAC file</text><!--MD5=[1a35259b776e0175ca9b7ab252565e93]
+@startuml "The order making scenario"
+' skinparam backgroundColor #EEEBDC
+skinparam handwritten false
+skinparam style strictuml
+
+actor       Customer    as customer
+participant "Client\n(Web browser\n&CAD)"    as client
+participant "Design server"    as server
+participant "Knowledge base\n(Fuseki)"    as KB
+
+customer -> client  :   http://127.0.0.1:1234\nhttp://127.0.0.1:1234/pipe_router
+client -> server    :   GET /pipe_router
+activate server
+server -> server    :   Do_GET(self)
+server - -> client   :   HTML for /pipe_router
+deactivate server
+client - -> customer :   web page for /pipe_router
+
+customer -> client  :   Input and submit parameter values
+client -> server    :   POST /pipe_router\n ?paras=InputValues
+activate server
+server -> server    :   Do_POST(self)
+server -> server    :   parse parameters
+server -> server    :   call GA to generate\n the best solution
+server -> KB++      :   POST /update\n?paras=parametric model
+KB -> KB            :   SPARQL\n update
+return result for\nSPARQL update
+server -> server    :   generate the models \nrepresented in \nDFA, MAC, javaScript\nfrom template\nand return the webpage
+server - -> client   :   viewer HTML for /pipe_router\n containing the model in \nDFA, MAC and JavaScript
+deactivate server
+client - -> customer :   The visualized model\n and DFA, MAC file
+
+customer -> client  :   http://127.0.0.1:1234/viewer\n?productID=p001
+client -> server    :   GET /viewer\n ?productID=p001
+activate server
+server -> KB++      :   POST /query\n ?paras=productID
+KB -> KB            :   SPARQL\n query
+return result for SPARQL query
+server -> server    :   parse the result\n to generate the model
+server - -> client   :   viewer HTML for /pipe_router \ncontaining the model in \nDFA, MAC and JavaScript
+deactivate server
+client - -> customer :   The visualized model\n and DFA, MAC file
+@enduml
+
+@startuml "The order making scenario"
+skinparam handwritten false
+skinparam style strictuml
+
+actor       Customer    as customer
+participant "Client\n(Web browser\n&CAD)"    as client
+participant "Design server"    as server
+participant "Knowledge base\n(Fuseki)"    as KB
+
+customer -> client  :   http://127.0.0.1:1234\nhttp://127.0.0.1:1234/pipe_router
+client -> server    :   GET /pipe_router
+activate server
+server -> server    :   Do_GET(self)
+server - -> client   :   HTML for /pipe_router
+deactivate server
+client - -> customer :   web page for /pipe_router
+
+customer -> client  :   Input and submit parameter values
+client -> server    :   POST /pipe_router\n ?paras=InputValues
+activate server
+server -> server    :   Do_POST(self)
+server -> server    :   parse parameters
+server -> server    :   call GA to generate\n the best solution
+server -> KB++      :   POST /update\n?paras=parametric model
+KB -> KB            :   SPARQL\n update
+return result for\nSPARQL update
+server -> server    :   generate the models \nrepresented in \nDFA, MAC, javaScript\nfrom template\nand return the webpage
+server - -> client   :   viewer HTML for /pipe_router\n containing the model in \nDFA, MAC and JavaScript
+deactivate server
+client - -> customer :   The visualized model\n and DFA, MAC file
+
+customer -> client  :   http://127.0.0.1:1234/viewer\n?productID=p001
+client -> server    :   GET /viewer\n ?productID=p001
+activate server
+server -> KB++      :   POST /query\n ?paras=productID
+KB -> KB            :   SPARQL\n query
+return result for SPARQL query
+server -> server    :   parse the result\n to generate the model
+server - -> client   :   viewer HTML for /pipe_router \ncontaining the model in \nDFA, MAC and JavaScript
+deactivate server
+client - -> customer :   The visualized model\n and DFA, MAC file
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg></p>
+      </div>
+      
+      
+    </body>
+    
+    
+    
+    
+    
+    
+    
+  </html>
