@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on ZZZ</title>
+    <link>https://zl6977.github.io/posts/</link>
+    <description>Recent content in Posts on ZZZ</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 07 Sep 2022 18:57:04 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My 2nd Post</title>
+      <link>https://zl6977.github.io/posts/kbe-framework-sequence-diagram/</link>
+      <pubDate>Wed, 07 Sep 2022 18:57:04 +0200</pubDate>
+      
+      <guid>https://zl6977.github.io/posts/kbe-framework-sequence-diagram/</guid>
+      <description>A low-code KBE framework Some reference The low code webinar and a brochure. How the Composable Enterprise Will Accelerate Digital Transformation in the Automotive Industry[EB/OL]//Mendix. [2022-08-30]. https://www.mendix.com/resources/how-the-composable-enterprise-will-accelerate-digital-transformation-in-the-automotive-industry/.
+Digitalisation personnel Gartner reports that
+business technologists—employees who report outside of IT departments and create technology or analytics capabilities for work—now make up ==41%== of digital technologists. Another ==49%== are technology end users, leaving only ==10%== inside the IT department. How does the manufacturing team create its personalized application?</description>
+    </item>
+    
+    <item>
+      <title>My First Post</title>
+      <link>https://zl6977.github.io/posts/my-first-post/</link>
+      <pubDate>Wed, 07 Sep 2022 18:57:04 +0200</pubDate>
+      
+      <guid>https://zl6977.github.io/posts/my-first-post/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,57 @@
+{{ $templateDomScripts := resources.Get "js/template-dom-scripts.js" }}
+{{ $domScripts := $templateDomScripts | resources.ExecuteAsTemplate "js/dom-scripts.js" . }}
+<script src="{{ $domScripts.RelPermalink }}"></script>
+
+<script src="{{ " js/prism.js" | relURL }}"></script>
+
+{{ if site.Params.search }}
+{{ $searchJs := resources.Get "js/search.js" | fingerprint }}
+<script src="{{ $searchJs.RelPermalink }}"></script>
+{{ $searchCss := resources.Get "css/search.css" | fingerprint }}
+<link rel="stylesheet" href="{{ $searchCss.RelPermalink }}">
+</link>
+{{ end }}
+
+{{ range .Site.Params.customJs }}
+<script src="{{ . | relURL }}"></script>
+{{ end }}
+
+{{ if or .Page.Params.plantuml .Site.Params.plantuml }}
+<!-- PlantUML -->
+<script src="https://cdn.jsdelivr.net/gh/jmnote/plantuml-encoder@1.2.4/dist/plantuml-encoder.min.js"
+    integrity="sha256-Qsk2KRBCN5qVZX7B+8+2IvQl1Aqc723qV1tBCQaVoqo=" crossorigin="anonymous"></script>
+<script>
+    (function () {
+        let plantumlPrefix = "language-plantuml";
+        Array.prototype.forEach.call(document.querySelectorAll("[class^=" + plantumlPrefix + "]"), function (code) {
+            let image = document.createElement("IMG");
+            image.loading = 'lazy'; // Lazy loading
+            let plantumlStr = decodeURI(code.innerHTML).replaceAll('&lt;', '<').replaceAll('&gt;', '>');
+            image.src = 'http://www.plantuml.com/plantuml/svg/~1' + plantumlEncoder.encode(plantumlStr);
+            code.parentNode.insertBefore(image, code);
+            image.style = "max-height:none";
+            code.style.display = 'none';
+        });
+    })();
+</script>
+{{ end }}
+
+<script>
+    function highlightzzz() {
+        const newNode = document.createElement("style");
+        const styleStr = document.createTextNode("mark {  background-color: yellow;  color: black;}");
+        newNode.appendChild(styleStr);
+        document.body.appendChild(newNode);
+
+        let bodyStr = document.getElementById("main").innerHTML;
+
+        let arr = bodyStr.split("==");
+        const cnt = (arr.length - 1) / 2;
+        for (let i = 0; i < cnt; i++) {
+            bodyStr = bodyStr.replace('==', '<mark>');
+            bodyStr = bodyStr.replace('==', '</mark>');
+        }
+        document.getElementById("main").innerHTML = bodyStr;
+    }
+    highlightzzz();
+</script>
