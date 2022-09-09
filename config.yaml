@@ -9,7 +9,7 @@ taxonomies:
   tag: tags
 
 permalinks:
-  post: /:filename/
+  post: /obsidian/:filename/
 
 imaging:
   quality: 99
@@ -66,9 +66,6 @@ markup:
       table: true
       taskList: true
       typographer: true
-      GFM: true
-      plantuml: true
-      highlight: true
     parser:
       attribute: true
       autoHeadingID: true
@@ -77,13 +74,13 @@ markup:
       unsafe: true
       xHTML: false
   highlight:
-    codeFences: false
+    codeFences: true
     hl_Lines: ""
     lineNoStart: 1
     lineNos: false
     lineNumbersInTable: false
     noClasses: true
-    style: monokai
+    style: monokailight
     tabWidth: 4
   tableOfContents:
     endLevel: 6

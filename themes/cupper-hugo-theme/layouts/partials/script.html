@@ -2,7 +2,7 @@
 {{ $domScripts := $templateDomScripts | resources.ExecuteAsTemplate "js/dom-scripts.js" . }}
 <script src="{{ $domScripts.RelPermalink }}"></script>
 
-<script src="{{ " js/prism.js" | relURL }}"></script>
+<!--<script src="{{ "js/prism.js" | relURL }}"></script>-->
 
 {{ if site.Params.search }}
 {{ $searchJs := resources.Get "js/search.js" | fingerprint }}
@@ -53,5 +53,23 @@
         }
         document.getElementById("main").innerHTML = bodyStr;
     }
+
+    function lineHight() {
+        const preTagList = document.getElementsByTagName("pre");
+        for (let i = 0; i < preTagList.length; i++) {
+            //默认每个pre只有一个code
+            let codeBlock = preTagList[i].getElementsByTagName("code")[0];
+            let spanList = codeBlock.childNodes;
+            for (let j = 0; j < spanList.length; j++) {
+                if ("style" in spanList[j]) {   //style中一定有display？
+                    if (spanList[j].style["display"] == "flex")
+                        spanList[j].style["display"] = "inline";
+                    // codeBlock.childNodes[j].style = "margin-top: 0px;"
+                    // spanList[j].style = "display: inline;";}
+                }
+            }
+        }
+    }
     highlightzzz();
+    lineHight();
 </script>
