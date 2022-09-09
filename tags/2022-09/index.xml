@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022-09 on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/2022-09/</link><description>Recent content in 2022-09 on ZZZ's Blogs</description><generator>Hugo -- gohugo.io</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 16:52:00 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/2022-09/index.xml" rel="self" type="application/rss+xml"/><item><title>WebService-server side</title><link>https://zl6977.github.io/obsidian/webservice-server-side/</link><pubDate>Wed, 07 Sep 2022 16:52:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/webservice-server-side/</guid><description>server side different languages to provide web service How to build web service API? oracle: Service-Oriented Architecture and Web Services: Concepts, Technologies, and Tools
+cgi: c http://w3.atomki.hu/atomki/CompGroup/2share/guide-to-creating-cpp-web-services.pdf https://stackoverflow.com/questions/25057819/how-to-create-restful-web-services-using-c-language-and-json-parser
+asmx: dotnet https://docs.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/write-web-service?source=recommendations
+python https://realpython.com/api-integration-in-python/ https://www.geeksforgeeks.org/making-soap-api-calls-using-python/
+Java https://www.javatpoint.com/java-web-services-tutorial
+![Java ws API][https://static.javatpoint.com/webservicepages/images/java-web-services.png]
+php: php Some related protocols UUDI [UDDI: an XML Web Service](https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms950813(v=msdn.10)
+https://www.tutorialspoint.com/uddi/uddi_quick_guide.htm https://www.oasis-open.org/committees/uddi-spec/doc/tn/uddi-spec-tc-tn-bpel-20040725.htm#_Toc78091140
+BPEL BEPL looks like an standard based on WSDL. A Hands-on Introduction to BPEL Chapter 5. UDDI Integration BPEL choreography vs.</description></item><item><title>WebService-protocols (SOAP,WSDL,UDDI)</title><link>https://zl6977.github.io/obsidian/webservice-protocols-soapwsdluddi/</link><pubDate>Wed, 07 Sep 2022 16:50:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/webservice-protocols-soapwsdluddi/</guid><description>XML https://www.runoob.com/xml/xml-intro.html
+XML 的设计宗旨是传输和存储数据，而不是显示数据。
+XML 标签没有被预定义。您需要自行定义标签。
+XML 被设计为具有自我描述性。
+XML 是 W3C 的推荐标准。
+XML 被设计用来传输和存储数据，其焦点是数据的内容。
+HTML 被设计用来显示数据，其焦点是数据的外观。
+XML 是独立于软件和硬件的信息传输工具。
+XML 把数据从 HTML 分离，
+XML 简化平台变更 升级到新的系统（硬件或软件平台），总是非常费时的。必须转换大量的数据，不兼容的数据经常会丢失。
+XML 数据以文本格式存储。这使得 XML 在不损失数据的情况下，更容易扩展或升级到新的操作系统、新的应用程序或新的浏览器。
+XML 声明 XML 声明文件的可选部分，如果存在需要放在文档的第一行，如下所示：
+&lt;?xml version="1.0" encoding="utf-8"?> XML 标签对大小写敏感 XML 属性值必须加引号 与 HTML 类似，XML 元素也可拥有属性（名称/值的对）。
+在 XML 中，XML 的属性值必须加引号。
+实体引用 在 XML 中，一些字符拥有特殊的意义。
+如果您把字符 &amp;ldquo;&amp;lt;&amp;rdquo; 放在 XML 元素中，会发生错误，这是因为解析器会把它当作新元素的开始。
+这样会产生 XML 错误：
+&amp;lt;message&amp;gt;if salary &amp;lt; 1000 then&amp;lt;/message&amp;gt; 为了避免这个错误，请用实体引用来代替&amp;lt;
+XML 中的注释 在 XML 中编写注释的语法与 HTML 的语法很相似。</description></item></channel></rss>
