@@ -3,7 +3,6 @@ aliases: null
 date: 2022-04-07 12:11:00 +02:00
 tags: [2022-04]
 title: C++笔记
-TOC: true
 ---
 
 #程序员 
@@ -543,7 +542,7 @@ ps->Fibonacci::gen_elems(64);
 `static_cast` 运算符可以担当起这项任务：
 ```C++
 if ( typeid(*ps) == typeid(Fibonacci)) {
-    Fibonacci ＊pf = static_cast<Fibonacci*>(ps);//无条件转换 
+    Fibonacci *pf = static_cast<Fibonacci*>(ps);//无条件转换 
     pf->gen_elems(64);
 }
 ```

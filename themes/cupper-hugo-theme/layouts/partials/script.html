@@ -39,16 +39,16 @@
 <script>
     function highlightzzz() {
         const newNode = document.createElement("style");
-        const styleStr = document.createTextNode("mark {  background-color: yellow;  color: black;}");
+        const styleStr = document.createTextNode("mark {background-color: yellow; color: black;}");
         newNode.appendChild(styleStr);
         document.body.appendChild(newNode);
 
         //保护代码块中的双等号
         let codeBlockList = document.getElementById("main").getElementsByTagName("code");
+        let CBList_bk = [];
         for (let i = 0; i < codeBlockList.length; i++) {
-            let codeStr = codeBlockList[i].innerHTML;
-            codeStr = codeStr.replaceAll('==', '$doubleEqualS$');
-            codeBlockList[i].innerHTML = codeStr;
+            CBList_bk.push(codeBlockList[i].innerHTML);
+            codeBlockList[i].innerHTML = i;
         }
         //读取main文本
         let bodyStr = document.getElementById("main").innerHTML;
@@ -70,11 +70,8 @@
         //将替换后的文本写回main
         document.getElementById("main").innerHTML = bodyStr;
         //替换回代码块中的双等号
-        codeBlockList = document.getElementById("main").getElementsByTagName("code");
         for (let i = 0; i < codeBlockList.length; i++) {
-            let codeStr = codeBlockList[i].innerHTML;
-            codeStr = codeStr.replaceAll('$doubleEqualS$', '==');
-            codeBlockList[i].innerHTML = codeStr;
+            codeBlockList[i].innerHTML = CBList_bk[i];
         }
     }
 

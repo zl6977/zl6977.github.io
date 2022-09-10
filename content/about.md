@@ -19,7 +19,7 @@ Learn more and contribute on [GitHub](https://github.com/gohugoio).
 ## Cupper theme
 The cupper theme is an accessibility-friendly Hugo theme, ported from the original Cupper project.    
 
-It is a clean and elegant, make the user focous on the words.
+It is clean and elegant, making the user focus on the words.
 
 Find it [here](https://github.com/zwbetz-gh/cupper-hugo-theme).
 
@@ -67,16 +67,16 @@ Find it [here](https://github.com/zwbetz-gh/cupper-hugo-theme).
 <script>
     function highlightzzz() {
         const newNode = document.createElement("style");
-        const styleStr = document.createTextNode("mark {  background-color: yellow;  color: black;}");
+        const styleStr = document.createTextNode("mark {background-color: yellow; color: black;}");
         newNode.appendChild(styleStr);
         document.body.appendChild(newNode);
 
         //保护代码块中的双等号
         let codeBlockList = document.getElementById("main").getElementsByTagName("code");
+        let CBList_bk = [];
         for (let i = 0; i < codeBlockList.length; i++) {
-            let codeStr = codeBlockList[i].innerHTML;
-            codeStr = codeStr.replaceAll('==', '$doubleEqualS$');
-            codeBlockList[i].innerHTML = codeStr;
+            CBList_bk.push(codeBlockList[i].innerHTML);
+            codeBlockList[i].innerHTML = i;
         }
         //读取main文本
         let bodyStr = document.getElementById("main").innerHTML;
@@ -98,11 +98,8 @@ Find it [here](https://github.com/zwbetz-gh/cupper-hugo-theme).
         //将替换后的文本写回main
         document.getElementById("main").innerHTML = bodyStr;
         //替换回代码块中的双等号
-        codeBlockList = document.getElementById("main").getElementsByTagName("code");
         for (let i = 0; i < codeBlockList.length; i++) {
-            let codeStr = codeBlockList[i].innerHTML;
-            codeStr = codeStr.replaceAll('$doubleEqualS$', '==');
-            codeBlockList[i].innerHTML = codeStr;
+            codeBlockList[i].innerHTML = CBList_bk[i];
         }
     }
 
