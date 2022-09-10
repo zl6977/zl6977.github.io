@@ -43,15 +43,39 @@
         newNode.appendChild(styleStr);
         document.body.appendChild(newNode);
 
+        //保护代码块中的双等号
+        let codeBlockList = document.getElementById("main").getElementsByTagName("code");
+        for (let i = 0; i < codeBlockList.length; i++) {
+            let codeStr = codeBlockList[i].innerHTML;
+            codeStr = codeStr.replaceAll('==', '$doubleEqualS$');
+            codeBlockList[i].innerHTML = codeStr;
+        }
+        //读取main文本
         let bodyStr = document.getElementById("main").innerHTML;
+        //保护非高亮用途的双等号
+        bodyStr = bodyStr.replaceAll('"=="', '"$doubleEqualS$"');
+        bodyStr = bodyStr.replaceAll("'=='", "'$doubleEqualS$'");
 
+        //替换所有剩下的双等号
         let arr = bodyStr.split("==");
         const cnt = (arr.length - 1) / 2;
         for (let i = 0; i < cnt; i++) {
             bodyStr = bodyStr.replace('==', '<mark>');
             bodyStr = bodyStr.replace('==', '</mark>');
         }
+
+        //替换回非高亮用途的双等号
+        bodyStr = bodyStr.replaceAll('"$doubleEqualS$"', '"=="');
+        bodyStr = bodyStr.replaceAll("'$doubleEqualS$'", "'=='");
+        //将替换后的文本写回main
         document.getElementById("main").innerHTML = bodyStr;
+        //替换回代码块中的双等号
+        codeBlockList = document.getElementById("main").getElementsByTagName("code");
+        for (let i = 0; i < codeBlockList.length; i++) {
+            let codeStr = codeBlockList[i].innerHTML;
+            codeStr = codeStr.replaceAll('$doubleEqualS$', '==');
+            codeBlockList[i].innerHTML = codeStr;
+        }
     }
 
     function lineHight() {
