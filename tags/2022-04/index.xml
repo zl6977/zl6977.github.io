@@ -1,8 +1,134 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022-04 on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/2022-04/</link><description>Recent content in 2022-04 on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 09 Sep 2022 22:52:33 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/2022-04/index.xml" rel="self" type="application/rss+xml"/><item><title>pipe router optimization</title><link>https://zl6977.github.io/obsidian/pipe-router-optimization/</link><pubDate>Mon, 25 Apr 2022 15:46:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/pipe-router-optimization/</guid><description>Initialize_points() is time-consuming 3 ways to try:
-tags and points are different. initialize tags, not points. hard to know when obstacle list is changed. -&amp;gt; ==The caller should know.== do not use points, use if pt in obstacle_list to judge. which is faster? if pt in obstacle_list is slower, so it is not helpful. sometimes the ==goal point is also an obstacle point==, so this is not robust. neighbors[] should include goalPt + goalVec not goalPt How about only generate the points on the boundary of the equipment?</description></item><item><title>C++笔记</title><link>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 07 Apr 2022 12:11:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</guid><description>#程序员
-Essential C++ #someday ✅ 2022-04-18 1 编程基础 很快就看完了，其中的文件操作不是很熟练，但应该不难。
-2 面向过程的编程风格。 指针(pointer)与引用(reference) pointer参数和reference参数二者之间功能类似，用法略有不同，更重要的差异是：
-pointer 可能为空，不指向实际对象。当我们提领pointer时，一定要先确定其值并非为0。 而对于reference，其必然指向某个对象，所以不须做此检查。 若需要更改原变量，需要传址，以下两者皆可： function(int&amp;amp; inPara); function(int* inParaPt); 若不需要更改原变量，只需传值，以下两者皆可： function(int inPara); function(const int&amp;amp; inPara); //此方法不需要在内存中复制一份原变量。
-如果是内建变量，因为内存占用很少，两者皆可。 如果是自定义类，一般用后者，省时省空间。 内存管理 file extent. This is not a good choice in most cases. local scope dynamic extent new, delete exist in heap memory if not deleted, ==memory leak== happens. 动静态内存分配 //见bilibili收藏 //静态内存分配，在stack，由编译器自动分配内存，生命周期结束自动释放 int i = 10; //动态内存分配，在heap，如果不delete会造成内存溢出 int *j = new int(20); delete j; 静态局部对象 local static objects 只对该函数可见的静态变量。 可以避免一些重复计算。</description></item><item><title>KBE framework to design an engineering product</title><link>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</link><pubDate>Mon, 04 Apr 2022 16:32:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</guid><description>#KBE
-framework in KBE approach the problems identification -&amp;gt; steps to solve the problems -&amp;gt; tools/method can be used
-possible objectives model represetation: geometric model non-geometric parameters CAD model CAE model ==rule represetation:== the rules/functions in &amp;ldquo;steps&amp;rdquo; steps: analysis algorithm optimization algorithm data storage and retrieve software integration report generation supporting tech KBE app as a ==web application architecture==. database application server user interface: http server KBE app as a ==&amp;ldquo;single big program&amp;rdquo;==, there should be data structure (the parametric model); parameters + constructor -&amp;gt; a sharable format function declarations: sth.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>2022-04 on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/2022-04/</link><description>Recent content in 2022-04 on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Fri, 09 Sep 2022 22:52:33 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/2022-04/index.xml" rel="self" type="application/rss+xml"/><item><title>pipe router optimization</title><link>https://zl6977.github.io/obsidian/pipe-router-optimization/</link><pubDate>Mon, 25 Apr 2022 15:46:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/pipe-router-optimization/</guid><description>&lt;h2 id="initialize_points-is-time-consuming">Initialize_points() is time-consuming&lt;/h2>
+&lt;p>3 ways to try:&lt;/p>
+&lt;ol>
+&lt;li>tags and points are different. initialize tags, not points.
+&lt;ul>
+&lt;li>hard to know when obstacle list is changed. -&amp;gt; ==The caller should know.==&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>do not use points, use &lt;code>if pt in obstacle_list&lt;/code> to judge. which is faster?
+&lt;ul>
+&lt;li>&lt;code>if pt in obstacle_list&lt;/code> is slower, so it is not helpful.&lt;/li>
+&lt;li>sometimes the ==goal point is also an obstacle point==, so this is not robust.&lt;/li>
+&lt;li>neighbors[] should include &lt;code>goalPt + goalVec&lt;/code> not &lt;code>goalPt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How about only generate the points on the boundary of the equipment?
+&lt;ul>
+&lt;li>very useful&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="fix-bugs">Fix bugs:&lt;/h2>
+&lt;h3 id="indexerror">IndexError&lt;/h3>
+&lt;p>IndexError [(49, 8, 32), (51, 8, 32), (50, 7, 32), (50, 9, 32), (50, 8, 31), (50, 8, 33)]-&amp;gt;(50,8,32)
+IndexError [(49, 8, 34), (51, 8, 34), (50, 7, 34), (50, 9, 34), (50, 8, 33), (50, 8, 35)]-&amp;gt;(50,8,34)
+IndexError [(49, 35, 49), (51, 35, 49), (50, 34, 49), (50, 36, 49), (50, 35, 48), (50, 35, 50)]-&amp;gt;(50,35,49)&lt;/p></description></item><item><title>C++笔记</title><link>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 07 Apr 2022 12:11:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</guid><description>&lt;p>#程序员&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Essential C++ #someday ✅ 2022-04-18&lt;/li>
+&lt;/ul>
+&lt;h1 id="1-编程基础">1 编程基础&lt;/h1>
+&lt;p>很快就看完了，其中的文件操作不是很熟练，但应该不难。&lt;/p>
+&lt;h1 id="2-面向过程的编程风格">2 面向过程的编程风格。&lt;/h1>
+&lt;h2 id="指针pointer与引用reference">指针(pointer)与引用(reference)&lt;/h2>
+&lt;p>pointer参数和reference参数二者之间功能类似，用法略有不同，更重要的差异是：&lt;/p>
+&lt;ul>
+&lt;li>pointer 可能为空，不指向实际对象。当我们提领pointer时，一定要先确定其值并非为0。&lt;/li>
+&lt;li>而对于reference，其必然指向某个对象，所以不须做此检查。&lt;/li>
+&lt;/ul>
+&lt;p>若需要更改原变量，需要传址，以下两者皆可：
+function(int&amp;amp; inPara);
+function(int* inParaPt);
+若不需要更改原变量，只需传值，以下两者皆可：
+function(int inPara);
+function(const int&amp;amp; inPara); //此方法不需要在内存中复制一份原变量。&lt;/p>
+&lt;ul>
+&lt;li>如果是内建变量，因为内存占用很少，两者皆可。&lt;/li>
+&lt;li>如果是自定义类，一般用后者，省时省空间。&lt;/li>
+&lt;/ul>
+&lt;h2 id="内存管理">内存管理&lt;/h2>
+&lt;ul>
+&lt;li>file extent. This is not a good choice in most cases.&lt;/li>
+&lt;li>local scope&lt;/li>
+&lt;li>dynamic extent
+&lt;ul>
+&lt;li>new, delete&lt;/li>
+&lt;li>exist in heap memory&lt;/li>
+&lt;li>if not deleted, ==memory leak== happens.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="动静态内存分配">动静态内存分配&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-C++" data-lang="C++">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//见bilibili收藏
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//静态内存分配，在stack，由编译器自动分配内存，生命周期结束自动释放
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#00a8c8">int&lt;/span> &lt;span style="color:#111">i&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>&lt;span style="color:#111">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//动态内存分配，在heap，如果不delete会造成内存溢出
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#00a8c8">int&lt;/span> &lt;span style="color:#f92672">*&lt;/span>&lt;span style="color:#111">j&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#00a8c8">new&lt;/span> &lt;span style="color:#00a8c8">int&lt;/span>&lt;span style="color:#111">(&lt;/span>&lt;span style="color:#ae81ff">20&lt;/span>&lt;span style="color:#111">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a8c8">delete&lt;/span> &lt;span style="color:#111">j&lt;/span>&lt;span style="color:#111">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>KBE framework to design an engineering product</title><link>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</link><pubDate>Mon, 04 Apr 2022 16:32:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</guid><description>&lt;p>#KBE&lt;/p>
+&lt;h2 id="framework-in-kbe-approach">framework in KBE approach&lt;/h2>
+&lt;p>the problems identification -&amp;gt; steps to solve the problems -&amp;gt; tools/method can be used&lt;/p>
+&lt;h2 id="possible-objectives">possible objectives&lt;/h2>
+&lt;ul>
+&lt;li>model represetation:
+&lt;ul>
+&lt;li>geometric model&lt;/li>
+&lt;li>non-geometric parameters&lt;/li>
+&lt;li>CAD model&lt;/li>
+&lt;li>CAE model&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>==rule represetation:==
+&lt;ul>
+&lt;li>the rules/functions in &amp;ldquo;steps&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>steps:
+&lt;ul>
+&lt;li>analysis algorithm&lt;/li>
+&lt;li>optimization algorithm&lt;/li>
+&lt;li>data storage and retrieve&lt;/li>
+&lt;li>software integration&lt;/li>
+&lt;li>report generation&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="supporting-tech">supporting tech&lt;/h2>
+&lt;ul>
+&lt;li>KBE app as a ==web application architecture==.
+&lt;ul>
+&lt;li>database&lt;/li>
+&lt;li>application server&lt;/li>
+&lt;li>user interface: http server&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>KBE app as a ==&amp;ldquo;single big program&amp;rdquo;==, there should be
+&lt;ul>
+&lt;li>data structure (the parametric model);
+&lt;ul>
+&lt;li>parameters + constructor -&amp;gt; a sharable format&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>function declarations: sth. like &lt;code>c++ virtual function table&lt;/code>;
+&lt;ul>
+&lt;li>a declaration list -&amp;gt; a sharable format&lt;/li>
+&lt;li>Service-oriented architecture (SoA)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>model represetation:
+&lt;ul>
+&lt;li>parameters in knowledge base&lt;/li>
+&lt;li>constructor code in application server&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>possible way to ==rule represetation==:
+&lt;ul>
+&lt;li>function list in knowledge base&lt;/li>
+&lt;li>function code in application server?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="measurement-1-extendibility-and-interoperability">measurement-1: extendibility and interoperability&lt;/h2>
+&lt;p>“International Standard ISO/IEC/IEEE 24765 [8] defines&lt;/p></description></item></channel></rss>

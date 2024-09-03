@@ -1,80 +1,533 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on ZZZ's Blogs</title><link>https://zl6977.github.io/post/</link><description>Recent content in Blog on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://zl6977.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>在线网络工具收集</title><link>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</link><pubDate>Fri, 03 May 2024 18:00:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</guid><description>IP地址 &amp;amp; IPv6网站检测 测试本机是否可以用ipv6网络访问公网： https://test-ipv6.com/
-检测IPv4和IPv6地址： https://ipw.cn/
-检测网站是否可访问： https://ipw.cn/ipv6webcheck/
-IPv6 Online Port Scanner 很好用的在线端口扫描工具，支持IPv6： http://www.ipv6scanner.com/cgi-bin/main.py
-All Online Tools by DNS Checker 多种在线工具： https://dnschecker.org/all-tools.php
-多点连接测速 https://www.itdog.cn/http_ipv6/
-https://ping.chinaz.com/
-http://www.webkaka.com/
-Dynamic DNS 免费的动态DDNS： https://www.noip.com/
-测试web API 测试HTTP Methods (different HTTP verbs)： https://httpbin.org/#/HTTP_Methods</description></item><item><title>Microservice related</title><link>https://zl6977.github.io/obsidian/microservice-related/</link><pubDate>Sun, 04 Dec 2022 11:21:55 +0100</pubDate><guid>https://zl6977.github.io/obsidian/microservice-related/</guid><description>微服务架构是什么？ - 老刘的回答 - 知乎 link: https://www.zhihu.com/question/65502802/answer/802678798 微服务架构 = 80% 的 SOA 服务架构思想 + 100% 的组件化架构思想 + 80% 的领域建模思想
-最初的需求 随着业务发展 这一阶段存在很多不合理的地方：
-网站和移动端应用有==很多相同业务逻辑的重复代码==。 数据有时候通过数据库共享，有时候通过接口调用传输。接口调用关系杂乱。 单个应用为了给其他应用提供接口，渐渐地越改越大，包含了很多本来就不属于它的逻辑。应用边界模糊，==功能归属混乱==。 管理后台在一开始的设计中保障级别较低。加入数据分析和促销管理相关功能后出现性能瓶颈，影响了其他应用。 数据库表结构被多个应用依赖，==无法重构和优化==。 所有应用都在一个数据库上操作，数据库出现性能瓶颈。特别是数据分析跑起来的时候，数据库性能急剧下降。 开发、测试、部署、维护愈发困难。即使==只改动一个小功能，也需要整个应用一起发布==。有时候发布会不小心带上了一些未经测试的代码，或者修改了一个功能后，另一个意想不到的地方出错了。为了减轻发布可能产生的问题的影响和线上业务停顿的影响，所有应用都要在凌晨三四点执行发布。发布后为了验证应用正常运行，还得盯到第二天白天的用户高峰期…… 团队出现推诿扯皮现象。关于一些==公用的功能应该建设在哪个应用上==的问题常常要争论很久，最后要么干脆各做各的，或者随便放个地方但是都不维护。 是时候做出改变了 这个阶段只是将服务分开了，数据库依然是共用的，所以一些烟囱式系统的缺点仍然存在：
-数据库成为性能瓶颈，并且有单点故障的风险。 数据管理趋向混乱。即使一开始有良好的模块化设计，随着时间推移，==总会有一个服务直接从数据库取另一个服务的数据的现象==。 ==数据库表结构可能被多个服务依赖==，牵一发而动全身，很难调整。 数据库也拆开 如果一直保持共用数据库的模式，则整个架构会越来越僵化，失去了微服务架构的意义。因此小明和小红一鼓作气，把数据库也拆分了。==所有持久化层相互隔离，由各个服务自己负责==。另外，为了提高系统的实时性，加入了消息队列机制。架构如下： 没有银弹 微服务架构虽然解决了旧问题，也引入了新的问题：
-微服务架构整个应用分散成多个服务，定位故障点非常困难。 稳定性下降。服务数量变多导致其中一个服务出现故障的概率增大，并且一个服务故障可能导致整个系统挂掉。事实上，在大访问量的生产场景下，故障总是会出现的。 服务数量非常多，部署、管理的工作量很大。 开发方面：如何保证各个服务在持续开发的情况下仍然保持协同合作。 测试方面：服务拆分后，几乎所有功能都会涉及多个服务。原本单个程序的测试变为服务间调用的测试。测试变得更加复杂。 创始人的博客Martinfowler.com https://martinfowler.com/articles/microservices.html
-A definition of this new architectural term The term &amp;ldquo;Microservice Architecture&amp;rdquo; has sprung up over the last few years to describe ==a particular way of designing software applications== as ==suites of independently deployable services==.</description></item><item><title>EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2022</title><link>https://zl6977.github.io/obsidian/european-conference-on-product-and-process-modeling-2022/</link><pubDate>Sun, 18 Sep 2022 16:30:39 +0200</pubDate><guid>https://zl6977.github.io/obsidian/european-conference-on-product-and-process-modeling-2022/</guid><description>EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2022 https://www.ecppm2022.org/
-BIM BIM (building information modeling), a digitalization trend in construction area. And I think in that logic, our work can be called &amp;ldquo;product information/knowledge modeling&amp;rdquo;. I think it is useful to learn how they balance the platform and problem domain in their job and how their work contributes to the platform.
-讨论后的一些收获 IFC (Industry Fundimental Class) 不能涵盖施工阶段的信息，因为施工阶段的有些信息不是显式的，不易表达，还有一些与设计与结构阶段耦合，所以难以全部数字化。 对于系列化的、较标准的建筑，设计与结构阶段已有较高的数字化，似乎也有一定程度的自动化，但似乎还是没有大规模应用，因为还有一些阶段并没有集成起来。 我的机械产品设计流程数字化可以提供一个平台，将各个操作数字化、规范化，能自动化的就自动化、不能的交给人工，人工处理完后继续回到自动化流程。 通过问卷得到机械产品的设计工作流。 规则分类：![[EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2022#A multi-representation method of building rules for automatic code compliance checking]] Ontology-related BIM the Ontology building process in the third paper is undergoing.</description></item><item><title>WebService-server side</title><link>https://zl6977.github.io/obsidian/webservice-server-side/</link><pubDate>Wed, 07 Sep 2022 16:52:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/webservice-server-side/</guid><description>server side different languages to provide web service How to build web service API? oracle: Service-Oriented Architecture and Web Services: Concepts, Technologies, and Tools
-cgi: c http://w3.atomki.hu/atomki/CompGroup/2share/guide-to-creating-cpp-web-services.pdf https://stackoverflow.com/questions/25057819/how-to-create-restful-web-services-using-c-language-and-json-parser
-asmx: dotnet https://docs.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/write-web-service?source=recommendations
-python https://realpython.com/api-integration-in-python/ https://www.geeksforgeeks.org/making-soap-api-calls-using-python/
-Java https://www.javatpoint.com/java-web-services-tutorial
-![Java ws API][https://static.javatpoint.com/webservicepages/images/java-web-services.png]
-php: php Some related protocols UUDI [UDDI: an XML Web Service](https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms950813(v=msdn.10)
-https://www.tutorialspoint.com/uddi/uddi_quick_guide.htm https://www.oasis-open.org/committees/uddi-spec/doc/tn/uddi-spec-tc-tn-bpel-20040725.htm#_Toc78091140
-BPEL BEPL looks like an standard based on WSDL. A Hands-on Introduction to BPEL Chapter 5. UDDI Integration BPEL choreography vs.</description></item><item><title>WebService-protocols (SOAP,WSDL,UDDI)</title><link>https://zl6977.github.io/obsidian/webservice-protocols-soapwsdluddi/</link><pubDate>Wed, 07 Sep 2022 16:50:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/webservice-protocols-soapwsdluddi/</guid><description>XML https://www.runoob.com/xml/xml-intro.html
-XML 的设计宗旨是传输和存储数据，而不是显示数据。
-XML 标签没有被预定义。您需要自行定义标签。
-XML 被设计为具有自我描述性。
-XML 是 W3C 的推荐标准。
-XML 被设计用来传输和存储数据，其焦点是数据的内容。
-HTML 被设计用来显示数据，其焦点是数据的外观。
-XML 是独立于软件和硬件的信息传输工具。
-XML 把数据从 HTML 分离，
-XML 简化平台变更 升级到新的系统（硬件或软件平台），总是非常费时的。必须转换大量的数据，不兼容的数据经常会丢失。
-XML 数据以文本格式存储。这使得 XML 在不损失数据的情况下，更容易扩展或升级到新的操作系统、新的应用程序或新的浏览器。
-XML 声明 XML 声明文件的可选部分，如果存在需要放在文档的第一行，如下所示：
-&lt;?xml version="1.0" encoding="utf-8"?> XML 标签对大小写敏感 XML 属性值必须加引号 与 HTML 类似，XML 元素也可拥有属性（名称/值的对）。
-在 XML 中，XML 的属性值必须加引号。
-实体引用 在 XML 中，一些字符拥有特殊的意义。
-如果您把字符 &amp;ldquo;&amp;lt;&amp;rdquo; 放在 XML 元素中，会发生错误，这是因为解析器会把它当作新元素的开始。
-这样会产生 XML 错误：
-&amp;lt;message&amp;gt;if salary &amp;lt; 1000 then&amp;lt;/message&amp;gt; 为了避免这个错误，请用实体引用来代替&amp;lt;
-XML 中的注释 在 XML 中编写注释的语法与 HTML 的语法很相似。</description></item><item><title>A low-code KBE framework</title><link>https://zl6977.github.io/obsidian/a-low-code-kbe-framework/</link><pubDate>Wed, 24 Aug 2022 11:16:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/a-low-code-kbe-framework/</guid><description>A low-code KBE framework Some reference The low code webinar and a brochure. How the Composable Enterprise Will Accelerate Digital Transformation in the Automotive Industry[EB/OL]//Mendix. [2022-08-30]. https://www.mendix.com/resources/how-the-composable-enterprise-will-accelerate-digital-transformation-in-the-automotive-industry/.
-Digitalisation personnel Gartner reports that
-business technologists—employees who report outside of IT departments and create technology or analytics capabilities for work—now make up ==41%== of digital technologists. Another ==49%== are technology end users, leaving only ==10%== inside the IT department. How does the manufacturing team create its personalized application?</description></item><item><title>类比是认知的核心 – 侯世达斯坦福演讲</title><link>https://zl6977.github.io/obsidian/%E7%B1%BB%E6%AF%94%E6%98%AF%E8%AE%A4%E7%9F%A5%E7%9A%84%E6%A0%B8%E5%BF%83-%E4%BE%AF%E4%B8%96%E8%BE%BE%E6%96%AF%E5%9D%A6%E7%A6%8F%E6%BC%94%E8%AE%B2/</link><pubDate>Wed, 29 Jun 2022 22:55:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/%E7%B1%BB%E6%AF%94%E6%98%AF%E8%AE%A4%E7%9F%A5%E7%9A%84%E6%A0%B8%E5%BF%83-%E4%BE%AF%E4%B8%96%E8%BE%BE%E6%96%AF%E5%9D%A6%E7%A6%8F%E6%BC%94%E8%AE%B2/</guid><description>类比是认知的核心 ziyunirvana.wordpress.com/2020/01/01/类比是认知的核心-侯世达斯坦福演讲/ https://www.bilibili.com/video/av18699990/?spm_id_from=333.788.videocard.0
-侯世达斯坦福演讲 概要 Categorization is the name of cognition game.
-Analogy is the mechanism that drives it all.
-类比：两个事物，在本质上是一样的 – 这个”本质“是我们自己赋予的
-比如假说：光的本质和雪的本质是一样的 – 都能造成阴影，都是碎片的 Analogy Reasoning 只是类比的一个小孩子游戏，但类比是通往四面八方的高速路:
-A is to B, then C is to D 我对父亲的失望，类比四十年后，女儿对我的失望 小说中，飞机因为飓风的绕道；类比，我在过道因为突然插入的女士而绕道 阳光下，树的阴影；类比，大雪中，树下的空白（没有雪覆盖）的“阴影”；类比，生活中抽象的“阴影” 类比并不一定有目的，不一定被意识到，类比存在于生活之中。
-There is no fundamental difference between a single memory trace(only one instance) and a category.
-a mecca for tourists the moons of Jupiter the Paris of the Middle East 人的思想，是由无数概念单元组成的（human mind: endless, limitless, chunking）</description></item><item><title>pipe router optimization</title><link>https://zl6977.github.io/obsidian/pipe-router-optimization/</link><pubDate>Mon, 25 Apr 2022 15:46:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/pipe-router-optimization/</guid><description>Initialize_points() is time-consuming 3 ways to try:
-tags and points are different. initialize tags, not points. hard to know when obstacle list is changed. -&amp;gt; ==The caller should know.== do not use points, use if pt in obstacle_list to judge. which is faster? if pt in obstacle_list is slower, so it is not helpful. sometimes the ==goal point is also an obstacle point==, so this is not robust. neighbors[] should include goalPt + goalVec not goalPt How about only generate the points on the boundary of the equipment?</description></item><item><title>C++笔记</title><link>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 07 Apr 2022 12:11:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</guid><description>#程序员
-Essential C++ #someday ✅ 2022-04-18 1 编程基础 很快就看完了，其中的文件操作不是很熟练，但应该不难。
-2 面向过程的编程风格。 指针(pointer)与引用(reference) pointer参数和reference参数二者之间功能类似，用法略有不同，更重要的差异是：
-pointer 可能为空，不指向实际对象。当我们提领pointer时，一定要先确定其值并非为0。 而对于reference，其必然指向某个对象，所以不须做此检查。 若需要更改原变量，需要传址，以下两者皆可： function(int&amp;amp; inPara); function(int* inParaPt); 若不需要更改原变量，只需传值，以下两者皆可： function(int inPara); function(const int&amp;amp; inPara); //此方法不需要在内存中复制一份原变量。
-如果是内建变量，因为内存占用很少，两者皆可。 如果是自定义类，一般用后者，省时省空间。 内存管理 file extent. This is not a good choice in most cases. local scope dynamic extent new, delete exist in heap memory if not deleted, ==memory leak== happens. 动静态内存分配 //见bilibili收藏 //静态内存分配，在stack，由编译器自动分配内存，生命周期结束自动释放 int i = 10; //动态内存分配，在heap，如果不delete会造成内存溢出 int *j = new int(20); delete j; 静态局部对象 local static objects 只对该函数可见的静态变量。 可以避免一些重复计算。</description></item><item><title>KBE framework to design an engineering product</title><link>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</link><pubDate>Mon, 04 Apr 2022 16:32:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</guid><description>#KBE
-framework in KBE approach the problems identification -&amp;gt; steps to solve the problems -&amp;gt; tools/method can be used
-possible objectives model represetation: geometric model non-geometric parameters CAD model CAE model ==rule represetation:== the rules/functions in &amp;ldquo;steps&amp;rdquo; steps: analysis algorithm optimization algorithm data storage and retrieve software integration report generation supporting tech KBE app as a ==web application architecture==. database application server user interface: http server KBE app as a ==&amp;ldquo;single big program&amp;rdquo;==, there should be data structure (the parametric model); parameters + constructor -&amp;gt; a sharable format function declarations: sth.</description></item><item><title>cmd Test</title><link>https://zl6977.github.io/obsidian/cmd-test/</link><pubDate>Tue, 04 Aug 2020 21:05:05 -0500</pubDate><guid>https://zl6977.github.io/obsidian/cmd-test/</guid><description>Testing out GitHub issue https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42
-Line 1 Line 2 Line 3</description></item><item><title>Multiple Expandable Test</title><link>https://zl6977.github.io/obsidian/multiple-expandable-test/</link><pubDate>Wed, 17 Jun 2020 22:01:14 -0500</pubDate><guid>https://zl6977.github.io/obsidian/multiple-expandable-test/</guid><description>Testing out GitHub issue https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36 &amp;ndash; Multiple expandable shortcodes do not work if they have the same inner text.
-expandable 1 Same inner text. expandable 2 Same inner text. expandable 3 Different inner text.</description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>Testing out GitHub issue https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16
-Cette phrase prononcée par Greta Thunberg</description></item><item><title>Katex Math Typesetting</title><link>https://zl6977.github.io/obsidian/katex-math-typesetting/</link><pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/katex-math-typesetting/</guid><description>Enable Katex in the config file by setting the katex param to true. This will import the necessary Katex CSS/JS.
-Note: Use the online reference of supported TeX functions.
-Some math:
-$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$ $$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
-More math:
-$$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$ $$ \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } $$</description></item><item><title>Cupper Typography</title><link>https://zl6977.github.io/obsidian/cupper-typography/</link><pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-typography/</guid><description>Headings ## Heading 2 ### Heading 3 #### Heading 4 ##### Heading 5 ###### Heading 6 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Text *This text will be italic* _This will also be italic_ **This text will be bold** __This will also be bold__ _You **can** combine them_ This text will be italic
-This will also be italic
-This text will be bold
-This will also be bold</description></item><item><title>Cupper Shortcodes</title><link>https://zl6977.github.io/obsidian/cupper-shortcodes/</link><pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-shortcodes/</guid><description>blockquote {{&amp;lt; blockquote author=&amp;#34;Carl Jung&amp;#34; &amp;gt;}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity. {{&amp;lt; /blockquote &amp;gt;}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness.</description></item><item><title>NASA Images</title><link>https://zl6977.github.io/obsidian/nasa-images/</link><pubDate>Thu, 27 Dec 2018 20:46:49 -0600</pubDate><guid>https://zl6977.github.io/obsidian/nasa-images/</guid><description>The below images are from the NASA Image and Video Library &amp;ndash; indulge yourself, revel in their beauty.
-The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. Credits. The Moon is an astronomical body that orbits planet Earth and is Earth&amp;rsquo;s only permanent natural satellite.</description></item><item><title>Quotes by Carl Jung</title><link>https://zl6977.github.io/obsidian/quotes-by-carl-jung/</link><pubDate>Wed, 26 Dec 2018 00:29:41 -0600</pubDate><guid>https://zl6977.github.io/obsidian/quotes-by-carl-jung/</guid><description>Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity. &amp;mdash; Carl Jung The least of things with a meaning is worth more in life than the greatest of things without it. &amp;mdash; Carl Jung Who looks outside, dreams; who looks inside, awakes.</description></item><item><title>Creating a New Theme</title><link>https://zl6977.github.io/obsidian/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/creating-a-new-theme/</guid><description>Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.
-We&amp;rsquo;ll start with creating a new site with a very basic template.</description></item><item><title>(Hu)go Template Primer</title><link>https://zl6977.github.io/obsidian/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/goisforlovers/</guid><description>Hugo uses the excellent Go html/template library for its template engine. It is an extremely lightweight engine that provides a very small amount of logic. In our experience that it is just the right amount of logic to be able to create a good static website. If you have used other template systems from different languages or frameworks you will find a lot of similarities in Go templates.
-This document is a brief primer on using Go templates.</description></item><item><title>Getting Started with Hugo</title><link>https://zl6977.github.io/obsidian/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/hugoisforlovers/</guid><description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
-Save it somewhere specific as we will be using it in the next step.
-More complete instructions are available at Install Hugo
-Step 2. Build the Docs Hugo has its own example site which happens to also be the documentation site you are reading right now.
-Follow the following steps:
-Clone the Hugo repository Go into the repo Run hugo in server mode and build the docs Open your browser to http://localhost:1313 Corresponding pseudo commands:</description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://zl6977.github.io/obsidian/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/migrate-from-jekyll/</guid><description>Move static content to static Jekyll has a rule that any directory not starting with _ will be copied as-is to the _site output. Hugo keeps all static content under static. You should therefore move it all there. With Jekyll, something that looked like
-▾ &amp;lt;root&amp;gt;/ ▾ images/ logo.png should become
-▾ &amp;lt;root&amp;gt;/ ▾ static/ ▾ images/ logo.png Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as CNAME) to be moved to static.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Blog on ZZZ's Blogs</title><link>https://zl6977.github.io/post/</link><description>Recent content in Blog on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><atom:link href="https://zl6977.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>Python requests lib throws SSL error in company network</title><link>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</link><pubDate>Tue, 03 Sep 2024 14:30:16 +0200</pubDate><guid>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</guid><description>&lt;h1 id="python-requests-lib-throws-ssl-error-in-company-network">Python requests lib throws SSL error in company network&lt;/h1>
+&lt;h2 id="short-version简短版">Short version/简短版&lt;/h2>
+&lt;p>Python requests lib is not using the certificate in system certificate manager, which means it can not find a usable certificate like your browser.
+So, the solution is to add the root certificate to the PEM file that python is using. Normally the root certificate is issued by your company, which can be checked in your browser.
+Then a working verification chain for python requests lib can be established.
+See a solution directly: [[#Solution 2 Alternative fix using a lib]]. I did not not try with this. If it does not work, use [[#Solution 1 Manual fix]].
+This problem does not happen on my personal computer, because there is no proxy generating a self-signed certificate.&lt;/p></description></item><item><title>在线网络工具收集</title><link>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</link><pubDate>Fri, 03 May 2024 18:00:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</guid><description>&lt;h1 id="ip地址--ipv6网站检测">IP地址 &amp;amp; IPv6网站检测&lt;/h1>
+&lt;p>测试本机是否可以用ipv6网络访问公网：
+&lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a>&lt;/p>
+&lt;p>检测IPv4和IPv6地址：
+&lt;a href="https://ipw.cn/">https://ipw.cn/&lt;/a>&lt;/p>
+&lt;p>检测网站是否可访问：
+&lt;a href="https://ipw.cn/ipv6webcheck/">https://ipw.cn/ipv6webcheck/&lt;/a>&lt;/p>
+&lt;h1 id="ipv6-online-port-scanner">IPv6 Online Port Scanner&lt;/h1>
+&lt;p>很好用的在线端口扫描工具，支持IPv6：
+&lt;a href="http://www.ipv6scanner.com/cgi-bin/main.py">http://www.ipv6scanner.com/cgi-bin/main.py&lt;/a>&lt;/p>
+&lt;h1 id="all-online-tools-by-dns-checker">All Online Tools by DNS Checker&lt;/h1>
+&lt;p>多种在线工具：
+&lt;a href="https://dnschecker.org/all-tools.php">https://dnschecker.org/all-tools.php&lt;/a>&lt;/p>
+&lt;h1 id="多点连接测速">多点连接测速&lt;/h1>
+&lt;p>&lt;a href="https://www.itdog.cn/http_ipv6/">https://www.itdog.cn/http_ipv6/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="https://ping.chinaz.com/">https://ping.chinaz.com/&lt;/a>&lt;/p>
+&lt;p>&lt;a href="http://www.webkaka.com/">http://www.webkaka.com/&lt;/a>&lt;/p>
+&lt;h1 id="dynamic-dns">Dynamic DNS&lt;/h1>
+&lt;p>免费的动态DDNS：
+&lt;a href="https://www.noip.com/">https://www.noip.com/&lt;/a>&lt;/p>
+&lt;h1 id="测试web-api">测试web API&lt;/h1>
+&lt;p>测试HTTP Methods (different HTTP verbs)：
+&lt;a href="https://httpbin.org/#/HTTP_Methods">https://httpbin.org/#/HTTP_Methods&lt;/a>&lt;/p></description></item><item><title>Microservice related</title><link>https://zl6977.github.io/obsidian/microservice-related/</link><pubDate>Sun, 04 Dec 2022 11:21:55 +0100</pubDate><guid>https://zl6977.github.io/obsidian/microservice-related/</guid><description>&lt;h2 id="微服务架构是什么---老刘的回答---知乎">微服务架构是什么？ - 老刘的回答 - 知乎&lt;/h2>
+&lt;p>link: &lt;a href="https://www.zhihu.com/question/65502802/answer/802678798">https://www.zhihu.com/question/65502802/answer/802678798&lt;/a>
+&lt;strong>微服务架构 = 80% 的 SOA 服务架构思想 + 100% 的&lt;a href="https://www.zhihu.com/search?q=%E7%BB%84%E4%BB%B6%E5%8C%96%E6%9E%B6%E6%9E%84&amp;amp;search_source=Entity&amp;amp;hybrid_search_source=Entity&amp;amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A1371300276%7D">组件化架构&lt;/a>思想 + 80% 的领域建模思想&lt;/strong>&lt;/p>
+&lt;h3 id="最初的需求">最初的需求&lt;/h3>
+&lt;p>&lt;img src="https://picx.zhimg.com/80/v2-72023eb73961d33d560cd4419f803103_1440w.webp" alt="最初的需求">&lt;/p>
+&lt;h3 id="随着业务发展">随着业务发展&lt;/h3>
+&lt;p>&lt;img src="https://picx.zhimg.com/80/v2-1292f5a391142ac8da195787e28291bf_1440w.webp?source=1940ef5c" alt="随着业务发展">
+这一阶段存在很多不合理的地方：&lt;/p>
+&lt;ul>
+&lt;li>网站和移动端应用有==很多相同业务逻辑的重复代码==。&lt;/li>
+&lt;li>数据有时候通过数据库共享，有时候通过接口调用传输。接口调用关系杂乱。&lt;/li>
+&lt;li>单个应用为了给其他应用提供接口，渐渐地越改越大，包含了很多本来就不属于它的逻辑。应用边界模糊，==功能归属混乱==。&lt;/li>
+&lt;li>管理后台在一开始的设计中保障级别较低。加入数据分析和促销管理相关功能后出现性能瓶颈，影响了其他应用。&lt;/li>
+&lt;li>&lt;a href="https://www.zhihu.com/search?q=%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%BB%93%E6%9E%84&amp;amp;search_source=Entity&amp;amp;hybrid_search_source=Entity&amp;amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A802678798%7D">数据库表结构&lt;/a>被多个应用依赖，==无法重构和优化==。&lt;/li>
+&lt;li>所有应用都在一个数据库上操作，数据库出现性能瓶颈。特别是数据分析跑起来的时候，数据库性能急剧下降。&lt;/li>
+&lt;li>开发、测试、部署、维护愈发困难。即使==只改动一个小功能，也需要整个应用一起发布==。有时候发布会不小心带上了一些未经测试的代码，或者修改了一个功能后，另一个意想不到的地方出错了。为了减轻发布可能产生的问题的影响和线上业务停顿的影响，所有应用都要在凌晨三四点执行发布。发布后为了验证应用正常运行，还得盯到第二天白天的用户高峰期……&lt;/li>
+&lt;li>团队出现推诿扯皮现象。关于一些==公用的功能应该建设在哪个应用上==的问题常常要争论很久，最后要么干脆各做各的，或者随便放个地方但是都不维护。&lt;/li>
+&lt;/ul>
+&lt;h3 id="是时候做出改变了">是时候做出改变了&lt;/h3>
+&lt;p>&lt;img src="https://pic1.zhimg.com/80/v2-0882bc64f3f20939876d3433e51fad72_1440w.webp?source=1940ef5c" alt="">
+这个阶段只是将服务分开了，数据库依然是共用的，所以一些烟囱式系统的缺点仍然存在：&lt;/p>
+&lt;ol>
+&lt;li>数据库成为性能瓶颈，并且有单点故障的风险。&lt;/li>
+&lt;li>数据管理趋向混乱。即使一开始有良好的模块化设计，随着时间推移，==总会有一个服务直接从数据库取另一个服务的数据的现象==。&lt;/li>
+&lt;li>==数据库表结构可能被多个服务依赖==，牵一发而动全身，很难调整。&lt;/li>
+&lt;/ol>
+&lt;h3 id="数据库也拆开">数据库也拆开&lt;/h3>
+&lt;p>如果一直保持共用数据库的模式，则整个架构会越来越僵化，失去了微服务架构的意义。因此小明和小红一鼓作气，把数据库也拆分了。==所有持久化层相互隔离，由各个服务自己负责==。另外，为了提高系统的实时性，加入了&lt;a href="https://www.zhihu.com/search?q=%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E6%9C%BA%E5%88%B6&amp;amp;search_source=Entity&amp;amp;hybrid_search_source=Entity&amp;amp;hybrid_search_extra=%7B%22sourceType%22%3A%22answer%22%2C%22sourceId%22%3A802678798%7D">消息队列机制&lt;/a>。架构如下：
+&lt;img src="https://picx.zhimg.com/80/v2-90388920d31fe35b791c6a92f758db18_1440w.webp?source=1940ef5c" alt="">&lt;/p>
+&lt;h3 id="没有银弹">没有银弹&lt;/h3>
+&lt;p>微服务架构虽然解决了旧问题，也引入了新的问题：&lt;/p></description></item><item><title>EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2022</title><link>https://zl6977.github.io/obsidian/european-conference-on-product-and-process-modeling-2022/</link><pubDate>Sun, 18 Sep 2022 16:30:39 +0200</pubDate><guid>https://zl6977.github.io/obsidian/european-conference-on-product-and-process-modeling-2022/</guid><description>&lt;h1 id="european-conference-on-product-and-process-modeling-2022">EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2022&lt;/h1>
+&lt;p>&lt;a href="https://www.ecppm2022.org/">https://www.ecppm2022.org/&lt;/a>&lt;/p>
+&lt;h2 id="bim">BIM&lt;/h2>
+&lt;p>BIM (building information modeling), a digitalization trend in construction area. And I think in that logic, our work can be called &amp;ldquo;product information/knowledge modeling&amp;rdquo;. I think it is useful to learn how they balance the platform and problem domain in their job and how their work contributes to the platform.&lt;/p>
+&lt;h2 id="讨论后的一些收获">讨论后的一些收获&lt;/h2>
+&lt;ul>
+&lt;li>IFC (Industry Fundimental Class) 不能涵盖施工阶段的信息，因为施工阶段的有些信息不是显式的，不易表达，还有一些与设计与结构阶段耦合，所以难以全部数字化。&lt;/li>
+&lt;li>对于系列化的、较标准的建筑，设计与结构阶段已有较高的数字化，似乎也有一定程度的自动化，但似乎还是没有大规模应用，因为还有一些阶段并没有集成起来。&lt;/li>
+&lt;li>我的机械产品设计流程数字化可以提供一个平台，将各个操作数字化、规范化，能自动化的就自动化、不能的交给人工，人工处理完后继续回到自动化流程。&lt;/li>
+&lt;li>通过问卷得到机械产品的设计工作流。&lt;/li>
+&lt;li>规则分类：![[EUROPEAN CONFERENCE ON PRODUCT AND PROCESS MODELING 2022#A multi-representation method of building rules for automatic code compliance checking]]&lt;/li>
+&lt;/ul>
+&lt;h2 id="ontology-related-bim">Ontology-related BIM&lt;/h2>
+&lt;p>the Ontology building process in the third paper is undergoing.
+They also see Ontology as tagged data, and the important part is also the algorithm part.&lt;/p></description></item><item><title>WebService-server side</title><link>https://zl6977.github.io/obsidian/webservice-server-side/</link><pubDate>Wed, 07 Sep 2022 16:52:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/webservice-server-side/</guid><description>&lt;h1 id="server-side">server side&lt;/h1>
+&lt;h2 id="different-languages-to-provide-web-service">different languages to provide web service&lt;/h2>
+&lt;p>How to build web service API?
+&lt;a href="https://www.oracle.com/technical-resources/articles/javase/webservices-protocols.html">oracle: Service-Oriented Architecture and Web Services: Concepts, Technologies, and Tools&lt;/a>&lt;/p>
+&lt;h3 id="cgi-c">cgi: c&lt;/h3>
+&lt;p>&lt;a href="http://w3.atomki.hu/atomki/CompGroup/2share/guide-to-creating-cpp-web-services.pdf">http://w3.atomki.hu/atomki/CompGroup/2share/guide-to-creating-cpp-web-services.pdf&lt;/a>
+&lt;a href="https://stackoverflow.com/questions/25057819/how-to-create-restful-web-services-using-c-language-and-json-parser">https://stackoverflow.com/questions/25057819/how-to-create-restful-web-services-using-c-language-and-json-parser&lt;/a>&lt;/p>
+&lt;h3 id="asmx-dotnet">asmx: dotnet&lt;/h3>
+&lt;p>&lt;a href="https://docs.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/write-web-service?source=recommendations">https://docs.microsoft.com/en-us/troubleshoot/developer/visualstudio/csharp/language-compilers/write-web-service?source=recommendations&lt;/a>&lt;/p>
+&lt;h3 id="python">python&lt;/h3>
+&lt;p>&lt;a href="https://realpython.com/api-integration-in-python/">https://realpython.com/api-integration-in-python/&lt;/a>
+&lt;a href="https://www.geeksforgeeks.org/making-soap-api-calls-using-python/">https://www.geeksforgeeks.org/making-soap-api-calls-using-python/&lt;/a>&lt;/p>
+&lt;h3 id="java">Java&lt;/h3>
+&lt;p>&lt;a href="https://www.javatpoint.com/java-web-services-tutorial">https://www.javatpoint.com/java-web-services-tutorial&lt;/a>&lt;/p>
+&lt;p>![Java ws API][https://static.javatpoint.com/webservicepages/images/java-web-services.png]&lt;/p>
+&lt;h3 id="php-php">php: php&lt;/h3>
+&lt;h2 id="some-related-protocols">Some related protocols&lt;/h2>
+&lt;h3 id="uudi">UUDI&lt;/h3>
+&lt;p>[UDDI: an XML Web Service](&lt;a href="https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms950813(v=msdn.10)">https://docs.microsoft.com/en-us/previous-versions/dotnet/articles/ms950813(v=msdn.10)&lt;/a>&lt;/p></description></item><item><title>WebService-protocols (SOAP,WSDL,UDDI)</title><link>https://zl6977.github.io/obsidian/webservice-protocols-soapwsdluddi/</link><pubDate>Wed, 07 Sep 2022 16:50:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/webservice-protocols-soapwsdluddi/</guid><description>&lt;h1 id="xml">XML&lt;/h1>
+&lt;p>&lt;a href="https://www.runoob.com/xml/xml-intro.html">https://www.runoob.com/xml/xml-intro.html&lt;/a>&lt;/p>
+&lt;ul>
+&lt;li>
+&lt;p>XML 的设计宗旨是传输和存储数据，而不是显示数据。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 标签没有被预定义。您需要自行定义标签。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 被设计为具有自我描述性。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 是 W3C 的推荐标准。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 被设计用来传输和存储数据，其焦点是数据的内容。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>HTML 被设计用来显示数据，其焦点是数据的外观。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 是独立于软件和硬件的信息传输工具。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 把数据从 HTML 分离，&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>XML 简化平台变更
+升级到新的系统（硬件或软件平台），总是非常费时的。必须转换大量的数据，不兼容的数据经常会丢失。&lt;/p>
+&lt;p>XML 数据以文本格式存储。这使得 XML 在不损失数据的情况下，更容易扩展或升级到新的操作系统、新的应用程序或新的浏览器。&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="xml-声明">XML 声明&lt;/h2>
+&lt;p>XML 声明文件的可选部分，如果存在需要放在文档的第一行，如下所示：&lt;/p>
+&lt;?xml version="1.0" encoding="utf-8"?>
+&lt;h2 id="xml-标签对大小写敏感">XML 标签对大小写敏感&lt;/h2>
+&lt;h2 id="xml-属性值必须加引号">XML 属性值必须加引号&lt;/h2>
+&lt;p>与 HTML 类似，XML 元素也可拥有属性（名称/值的对）。&lt;/p></description></item><item><title>A low-code KBE framework</title><link>https://zl6977.github.io/obsidian/a-low-code-kbe-framework/</link><pubDate>Wed, 24 Aug 2022 11:16:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/a-low-code-kbe-framework/</guid><description>&lt;h1 id="a-low-code-kbe-framework">A low-code KBE framework&lt;/h1>
+&lt;h2 id="some-reference">Some reference&lt;/h2>
+&lt;p>The low code webinar and a brochure.
+How the Composable Enterprise Will Accelerate Digital Transformation in the Automotive Industry[EB/OL]//Mendix. [2022-08-30]. &lt;a href="https://www.mendix.com/resources/how-the-composable-enterprise-will-accelerate-digital-transformation-in-the-automotive-industry/">https://www.mendix.com/resources/how-the-composable-enterprise-will-accelerate-digital-transformation-in-the-automotive-industry/&lt;/a>.&lt;/p>
+&lt;h3 id="digitalisation-personnel">Digitalisation personnel&lt;/h3>
+&lt;p>Gartner reports that&lt;/p>
+&lt;ul>
+&lt;li>business technologists—employees who report outside of IT departments and create technology or analytics capabilities for work—now make up ==41%== of digital technologists.&lt;/li>
+&lt;li>Another ==49%== are technology end users,&lt;/li>
+&lt;li>leaving only ==10%== inside the IT department.&lt;/li>
+&lt;/ul>
+&lt;h3 id="how-does-the-manufacturing-team-create-its-personalized-application">How does the manufacturing team create its personalized application?&lt;/h3>
+&lt;p>The low-code platform provides assembly tools for this task:&lt;/p></description></item><item><title>类比是认知的核心 – 侯世达斯坦福演讲</title><link>https://zl6977.github.io/obsidian/%E7%B1%BB%E6%AF%94%E6%98%AF%E8%AE%A4%E7%9F%A5%E7%9A%84%E6%A0%B8%E5%BF%83-%E4%BE%AF%E4%B8%96%E8%BE%BE%E6%96%AF%E5%9D%A6%E7%A6%8F%E6%BC%94%E8%AE%B2/</link><pubDate>Wed, 29 Jun 2022 22:55:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/%E7%B1%BB%E6%AF%94%E6%98%AF%E8%AE%A4%E7%9F%A5%E7%9A%84%E6%A0%B8%E5%BF%83-%E4%BE%AF%E4%B8%96%E8%BE%BE%E6%96%AF%E5%9D%A6%E7%A6%8F%E6%BC%94%E8%AE%B2/</guid><description>&lt;h1 id="类比是认知的核心">类比是认知的核心&lt;/h1>
+&lt;p>ziyunirvana.wordpress.com/2020/01/01/类比是认知的核心-侯世达斯坦福演讲/
+&lt;a href="https://www.bilibili.com/video/av18699990/?spm_id_from=333.788.videocard.0">https://www.bilibili.com/video/av18699990/?spm_id_from=333.788.videocard.0&lt;/a>&lt;/p>
+&lt;h2 id="侯世达斯坦福演讲">侯世达斯坦福演讲&lt;/h2>
+&lt;h3 id="概要">概要&lt;/h3>
+&lt;ol>
+&lt;li>
+&lt;p>Categorization is the name of cognition game.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>Analogy is the mechanism that drives it all.&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>类比：两个事物，在本质上是一样的 – 这个”本质“是我们自己赋予的&lt;/p>
+&lt;ol>
+&lt;li>比如假说：光的本质和雪的本质是一样的 – 都能造成阴影，都是碎片的&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>Analogy Reasoning 只是类比的一个小孩子游戏，但类比是通往四面八方的高速路:&lt;/p>
+&lt;ol>
+&lt;li>A is to B, then C is to D&lt;/li>
+&lt;li>我对父亲的失望，类比四十年后，女儿对我的失望&lt;/li>
+&lt;li>小说中，飞机因为飓风的绕道；类比，我在过道因为突然插入的女士而绕道&lt;/li>
+&lt;li>阳光下，树的阴影；类比，大雪中，树下的空白（没有雪覆盖）的“阴影”；类比，生活中抽象的“阴影”&lt;/li>
+&lt;/ol>
+&lt;/li>
+&lt;li>
+&lt;p>类比并不一定有目的，不一定被意识到，类比存在于生活之中。&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>There is no fundamental difference between a single memory trace(only one instance) and a category.&lt;/p></description></item><item><title>pipe router optimization</title><link>https://zl6977.github.io/obsidian/pipe-router-optimization/</link><pubDate>Mon, 25 Apr 2022 15:46:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/pipe-router-optimization/</guid><description>&lt;h2 id="initialize_points-is-time-consuming">Initialize_points() is time-consuming&lt;/h2>
+&lt;p>3 ways to try:&lt;/p>
+&lt;ol>
+&lt;li>tags and points are different. initialize tags, not points.
+&lt;ul>
+&lt;li>hard to know when obstacle list is changed. -&amp;gt; ==The caller should know.==&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>do not use points, use &lt;code>if pt in obstacle_list&lt;/code> to judge. which is faster?
+&lt;ul>
+&lt;li>&lt;code>if pt in obstacle_list&lt;/code> is slower, so it is not helpful.&lt;/li>
+&lt;li>sometimes the ==goal point is also an obstacle point==, so this is not robust.&lt;/li>
+&lt;li>neighbors[] should include &lt;code>goalPt + goalVec&lt;/code> not &lt;code>goalPt&lt;/code>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>How about only generate the points on the boundary of the equipment?
+&lt;ul>
+&lt;li>very useful&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ol>
+&lt;h2 id="fix-bugs">Fix bugs:&lt;/h2>
+&lt;h3 id="indexerror">IndexError&lt;/h3>
+&lt;p>IndexError [(49, 8, 32), (51, 8, 32), (50, 7, 32), (50, 9, 32), (50, 8, 31), (50, 8, 33)]-&amp;gt;(50,8,32)
+IndexError [(49, 8, 34), (51, 8, 34), (50, 7, 34), (50, 9, 34), (50, 8, 33), (50, 8, 35)]-&amp;gt;(50,8,34)
+IndexError [(49, 35, 49), (51, 35, 49), (50, 34, 49), (50, 36, 49), (50, 35, 48), (50, 35, 50)]-&amp;gt;(50,35,49)&lt;/p></description></item><item><title>C++笔记</title><link>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</link><pubDate>Thu, 07 Apr 2022 12:11:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/</guid><description>&lt;p>#程序员&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Essential C++ #someday ✅ 2022-04-18&lt;/li>
+&lt;/ul>
+&lt;h1 id="1-编程基础">1 编程基础&lt;/h1>
+&lt;p>很快就看完了，其中的文件操作不是很熟练，但应该不难。&lt;/p>
+&lt;h1 id="2-面向过程的编程风格">2 面向过程的编程风格。&lt;/h1>
+&lt;h2 id="指针pointer与引用reference">指针(pointer)与引用(reference)&lt;/h2>
+&lt;p>pointer参数和reference参数二者之间功能类似，用法略有不同，更重要的差异是：&lt;/p>
+&lt;ul>
+&lt;li>pointer 可能为空，不指向实际对象。当我们提领pointer时，一定要先确定其值并非为0。&lt;/li>
+&lt;li>而对于reference，其必然指向某个对象，所以不须做此检查。&lt;/li>
+&lt;/ul>
+&lt;p>若需要更改原变量，需要传址，以下两者皆可：
+function(int&amp;amp; inPara);
+function(int* inParaPt);
+若不需要更改原变量，只需传值，以下两者皆可：
+function(int inPara);
+function(const int&amp;amp; inPara); //此方法不需要在内存中复制一份原变量。&lt;/p>
+&lt;ul>
+&lt;li>如果是内建变量，因为内存占用很少，两者皆可。&lt;/li>
+&lt;li>如果是自定义类，一般用后者，省时省空间。&lt;/li>
+&lt;/ul>
+&lt;h2 id="内存管理">内存管理&lt;/h2>
+&lt;ul>
+&lt;li>file extent. This is not a good choice in most cases.&lt;/li>
+&lt;li>local scope&lt;/li>
+&lt;li>dynamic extent
+&lt;ul>
+&lt;li>new, delete&lt;/li>
+&lt;li>exist in heap memory&lt;/li>
+&lt;li>if not deleted, ==memory leak== happens.&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h3 id="动静态内存分配">动静态内存分配&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-C++" data-lang="C++">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//见bilibili收藏
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//静态内存分配，在stack，由编译器自动分配内存，生命周期结束自动释放
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#00a8c8">int&lt;/span> &lt;span style="color:#111">i&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#ae81ff">10&lt;/span>&lt;span style="color:#111">;&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">//动态内存分配，在heap，如果不delete会造成内存溢出
+&lt;/span>&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#75715e">&lt;/span>&lt;span style="color:#00a8c8">int&lt;/span> &lt;span style="color:#f92672">*&lt;/span>&lt;span style="color:#111">j&lt;/span> &lt;span style="color:#f92672">=&lt;/span> &lt;span style="color:#00a8c8">new&lt;/span> &lt;span style="color:#00a8c8">int&lt;/span>&lt;span style="color:#111">(&lt;/span>&lt;span style="color:#ae81ff">20&lt;/span>&lt;span style="color:#111">);&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#00a8c8">delete&lt;/span> &lt;span style="color:#111">j&lt;/span>&lt;span style="color:#111">;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pr</description></item><item><title>KBE framework to design an engineering product</title><link>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</link><pubDate>Mon, 04 Apr 2022 16:32:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/kbe-framework-to-design-an-engineering-product/</guid><description>&lt;p>#KBE&lt;/p>
+&lt;h2 id="framework-in-kbe-approach">framework in KBE approach&lt;/h2>
+&lt;p>the problems identification -&amp;gt; steps to solve the problems -&amp;gt; tools/method can be used&lt;/p>
+&lt;h2 id="possible-objectives">possible objectives&lt;/h2>
+&lt;ul>
+&lt;li>model represetation:
+&lt;ul>
+&lt;li>geometric model&lt;/li>
+&lt;li>non-geometric parameters&lt;/li>
+&lt;li>CAD model&lt;/li>
+&lt;li>CAE model&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>==rule represetation:==
+&lt;ul>
+&lt;li>the rules/functions in &amp;ldquo;steps&amp;rdquo;&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>steps:
+&lt;ul>
+&lt;li>analysis algorithm&lt;/li>
+&lt;li>optimization algorithm&lt;/li>
+&lt;li>data storage and retrieve&lt;/li>
+&lt;li>software integration&lt;/li>
+&lt;li>report generation&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="supporting-tech">supporting tech&lt;/h2>
+&lt;ul>
+&lt;li>KBE app as a ==web application architecture==.
+&lt;ul>
+&lt;li>database&lt;/li>
+&lt;li>application server&lt;/li>
+&lt;li>user interface: http server&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>KBE app as a ==&amp;ldquo;single big program&amp;rdquo;==, there should be
+&lt;ul>
+&lt;li>data structure (the parametric model);
+&lt;ul>
+&lt;li>parameters + constructor -&amp;gt; a sharable format&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>function declarations: sth. like &lt;code>c++ virtual function table&lt;/code>;
+&lt;ul>
+&lt;li>a declaration list -&amp;gt; a sharable format&lt;/li>
+&lt;li>Service-oriented architecture (SoA)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>model represetation:
+&lt;ul>
+&lt;li>parameters in knowledge base&lt;/li>
+&lt;li>constructor code in application server&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>possible way to ==rule represetation==:
+&lt;ul>
+&lt;li>function list in knowledge base&lt;/li>
+&lt;li>function code in application server?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul>
+&lt;h2 id="measurement-1-extendibility-and-interoperability">measurement-1: extendibility and interoperability&lt;/h2>
+&lt;p>“International Standard ISO/IEC/IEEE 24765 [8] defines&lt;/p></description></item><item><title>cmd Test</title><link>https://zl6977.github.io/obsidian/cmd-test/</link><pubDate>Tue, 04 Aug 2020 21:05:05 -0500</pubDate><guid>https://zl6977.github.io/obsidian/cmd-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42&lt;/a>&lt;/p>
+
+
+&lt;pre class="cmd">
+ 
+ &lt;code>Line 1&lt;/code>
+ 
+ &lt;code>Line 2&lt;/code>
+ 
+ &lt;code>Line 3&lt;/code>
+ 
+&lt;/pre></description></item><item><title>Multiple Expandable Test</title><link>https://zl6977.github.io/obsidian/multiple-expandable-test/</link><pubDate>Wed, 17 Jun 2020 22:01:14 -0500</pubDate><guid>https://zl6977.github.io/obsidian/multiple-expandable-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36&lt;/a> &amp;ndash; Multiple expandable shortcodes do not work if they have the same inner text.&lt;/p>
+&lt;div class="expandable-section">
+ 
+ &lt;h2>
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;button aria-expanded="false" data-expands="js-expandable-1c89db5c5e501dcce44ed1adb4dbf27f">
+ &lt;span class="expandable-label">expandable 1&lt;/span>
+ &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
+ &lt;g transform="translate(0 -981.5)">
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+ &lt;/g>
+ &lt;/svg>
+ &lt;/button>
+ 
+ &lt;/h2>
+ 
+ &lt;div id="js-expandable-1c89db5c5e501dcce44ed1adb4dbf27f" hidden>
+ Same inner text.
+ &lt;/div>
+&lt;/div>
+
+&lt;div class="expandable-section">
+ 
+ &lt;h2>
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;button aria-expanded="false" data-expands="js-expandable-5dbccdad1542c7eed9f10de45bb14c8f">
+ &lt;span class="expandable-label">expandable 2&lt;/span>
+ &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
+ &lt;g transform="translate(0 -981.5)">
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+ &lt;/g>
+ &lt;/svg>
+ &lt;/button>
+ 
+ &lt;/h2>
+ 
+ &lt;div id="js-expandable-5dbccdad1542c7eed9f10de45bb14c8f" hidden>
+ Same inner text.
+ &lt;/div>
+&lt;/div>
+
+&lt;div class="expandable-section">
+ 
+ &lt;h2>
+ 
+ 
+ 
+ 
+ 
+ 
+ &lt;button aria-expanded="false" data-expands="js-expandable-c24a90e354f64647019fa24c48ed131d">
+ &lt;span class="expandable-label">expandable 3&lt;/span>
+ &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
+ &lt;g transform="translate(0 -981.5)">
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
+ &lt;/g>
+ &lt;/svg>
+ &lt;/button>
+ 
+ &lt;/h2>
+ 
+ &lt;div id="js-expandable-c24a90e354f64647019fa24c48ed131d" hidden>
+ Different inner text.
+ &lt;/div>
+&lt;/div></description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16&lt;/a>&lt;/p>
+&lt;p>Cette phrase prononcée par Greta Thunberg&lt;/p></description></item><item><title>Katex Math Typesetting</title><link>https://zl6977.github.io/obsidian/katex-math-typesetting/</link><pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/katex-math-typesetting/</guid><description>&lt;p>Enable Katex in the config file by setting the &lt;code>katex&lt;/code> param to &lt;code>true&lt;/code>. This will import the necessary Katex CSS/JS.&lt;/p>
+&lt;p>&lt;strong>Note:&lt;/strong> Use the online reference of &lt;a href="https://katex.org/docs/supported.html">supported TeX functions&lt;/a>.&lt;/p>
+&lt;p>Some math:&lt;/p>
+&lt;pre tabindex="0">&lt;code>$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
+&lt;/code>&lt;/pre>&lt;p>$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$&lt;/p>
+&lt;p>More math:&lt;/p>
+&lt;pre tabindex="0">&lt;code>$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
+$$
+&lt;/code>&lt;/pre>&lt;p>$$
+\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+$$&lt;/p></description></item><item><title>Cupper Typography</title><link>https://zl6977.github.io/obsidian/cupper-typography/</link><pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-typography/</guid><description>&lt;h2 id="headings">Headings&lt;/h2>
+&lt;pre tabindex="0">&lt;code>## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+&lt;/code>&lt;/pre>&lt;h2 id="heading-2">Heading 2&lt;/h2>
+&lt;h3 id="heading-3">Heading 3&lt;/h3>
+&lt;h4 id="heading-4">Heading 4&lt;/h4>
+&lt;h5 id="heading-5">Heading 5&lt;/h5>
+&lt;h6 id="heading-6">Heading 6&lt;/h6>
+&lt;h2 id="text">Text&lt;/h2>
+&lt;pre tabindex="0">&lt;code>*This text will be italic*
+_This will also be italic_
+
+**This text will be bold**
+__This will also be bold__
+
+_You **can** combine them_
+&lt;/code>&lt;/pre>&lt;p>&lt;em>This text will be italic&lt;/em>&lt;/p>
+&lt;p>&lt;em>This will also be italic&lt;/em>&lt;/p></description></item><item><title>Cupper Shortcodes</title><link>https://zl6977.github.io/obsidian/cupper-shortcodes/</link><pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-shortcodes/</guid><description>&lt;h2 id="blockquote">blockquote&lt;/h2>
+&lt;pre tabindex="0">&lt;code>{{&amp;lt; blockquote author=&amp;#34;Carl Jung&amp;#34; &amp;gt;}}
+Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
+{{&amp;lt; /blockquote &amp;gt;}}
+&lt;/code>&lt;/pre>
+
+&lt;blockquote class="blockquote">
+ &lt;p>
+ Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
+ 
+ &lt;br>
+ &lt;span class="author">&amp;mdash; Carl Jung&lt;/span>
+ 
+ &lt;/p></description></item><item><title>NASA Images</title><link>https://zl6977.github.io/obsidian/nasa-images/</link><pubDate>Thu, 27 Dec 2018 20:46:49 -0600</pubDate><guid>https://zl6977.github.io/obsidian/nasa-images/</guid><description>&lt;p>The below images are from the &lt;a href="https://images.nasa.gov/">NASA Image and Video Library&lt;/a> &amp;ndash; indulge yourself, revel in their beauty.&lt;/p>
+
+
+
+
+
+
+
+
+
+ 
+
+
+&lt;figure role="group" aria-describedby="caption-b702144d9bf18a49078547e2789a824e">
+ &lt;a href="https://zl6977.github.io/obsidian/nasa-images/sun.jpg" class="img-link">
+ &lt;img src="https://zl6977.github.io/obsidian/nasa-images/sun_hu9532289078631047261.jpg">
+ &lt;/a>
+ &lt;figcaption id="caption-b702144d9bf18a49078547e2789a824e">
+ The Sun is the star at the center of the Solar System. It is a nearly perfect sphere of hot plasma, with internal convective motion that generates a magnetic field via a dynamo process. It is by far the most important source of energy for life on Earth. &lt;a href="https://images.nasa.gov/details-GSFC_20171208_Archive_e000393.html">Credits&lt;/a>.
+ &lt;/figcaption>
+&lt;/figure>
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+&lt;figure role="group" aria-describedby="caption-6639241672fe5fd93322ee67a723d3fa">
+ &lt;a href="https://zl6977.github.io/obsidian/nasa-images/moon.jpg" class="img-link">
+ &lt;img src="https://zl6977.github.io/obsidian/nasa-images/moon_hu2802846652266414625.jpg">
+ &lt;/a>
+ &lt;figcaption id="caption-6639241672fe5fd93322ee67a723d3fa">
+ The Moon is an astronomical body that orbits planet Earth and is Earth&amp;rsquo;s only permanent natural satellite. It is the fifth-largest natural satellite in the Solar System, and the largest among planetary satellites relative to the size of the planet that it orbits (its primary). The Moon is after Jupiter&amp;rsquo;s satellite Io the second-densest satellite in the Solar System among those whose densities are known. &lt;a href="https://images.nasa.gov/details-GSFC_20171208_Archive_e001861.html">Credits&lt;/a>.
+ &lt;/figcaption>
+&lt;/figure>
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+&lt;figure role="group" aria-describedby="caption-410cc2503dba275fb09d06b22e6355a9">
+ &lt;a href="https://zl6977.github.io/obsidian/nasa-images/earth.jpg" class="img-link">
+ &lt;img src="https://zl6977.github.io/obsidian/nasa-images/earth_hu16753056194502646031.jpg">
+ &lt;/a>
+ &lt;figcaption id="caption-410cc2503dba275fb09d06b22e6355a9">
+ Earth is the third planet from the Sun and the only astronomical object known to harbor life. According to radiometric dating and other sources of evidence, Earth formed over 4.5 billion years ago. Earth&amp;rsquo;s gravity interacts with other objects in space, especially the Sun and the Moon, Earth&amp;rsquo;s only natural satellite. Earth revolves around the Sun in 365.26 days, a period known as an Earth year. During this time, Earth rotates about its axis about 366.26 times. &lt;a href="https://images.nasa.gov/details-PIA18033.html">Credits&lt;/a>.
+ &lt;/figcaption>
+&lt;/figure></description></item><item><title>Quotes by Carl Jung</title><link>https://zl6977.github.io/obsidian/quotes-by-carl-jung/</link><pubDate>Wed, 26 Dec 2018 00:29:41 -0600</pubDate><guid>https://zl6977.github.io/obsidian/quotes-by-carl-jung/</guid><description>&lt;blockquote class="blockquote">
+ &lt;p>
+ Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
+ 
+ &lt;br>
+ &lt;span class="author">&amp;mdash; Carl Jung&lt;/span>
+ 
+ &lt;/p></description></item><item><title>Creating a New Theme</title><link>https://zl6977.github.io/obsidian/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
+&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
+&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>https://zl6977.github.io/obsidian/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
+its template engine. It is an extremely lightweight engine that provides a very
+small amount of logic. In our experience that it is just the right amount of
+logic to be able to create a good static website. If you have used other
+template systems from different languages or frameworks you will find a lot of
+similarities in Go templates.&lt;/p></description></item><item><title>Getting Started with Hugo</title><link>https://zl6977.github.io/obsidian/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo">Step 1. Install Hugo&lt;/h2>
+&lt;p>Go to &lt;a href="https://github.com/spf13/hugo/releases">Hugo releases&lt;/a> and download the
+appropriate version for your OS and architecture.&lt;/p>
+&lt;p>Save it somewhere specific as we will be using it in the next step.&lt;/p>
+&lt;p>More complete instructions are available at &lt;a href="https://gohugo.io/getting-started/installing/">Install Hugo&lt;/a>&lt;/p>
+&lt;h2 id="step-2-build-the-docs">Step 2. Build the Docs&lt;/h2>
+&lt;p>Hugo has its own example site which happens to also be the documentation site
+you are reading right now.&lt;/p></description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://zl6977.github.io/obsidian/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">Move static content to &lt;code>static&lt;/code>&lt;/h2>
+&lt;p>Jekyll has a rule that any directory not starting with &lt;code>_&lt;/code> will be copied as-is to the &lt;code>_site&lt;/code> output. Hugo keeps all static content under &lt;code>static&lt;/code>. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p>
+&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+ ▾ images/
+ logo.png
+&lt;/code>&lt;/pre>
+&lt;p>should become&lt;/p>
+&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+ ▾ static/
+ ▾ images/
+ logo.png
+&lt;/code>&lt;/pr</description></item></channel></rss>

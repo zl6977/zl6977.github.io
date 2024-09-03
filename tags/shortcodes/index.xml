@@ -1,1 +1,14 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shortcodes on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/shortcodes/</link><description>Recent content in Shortcodes on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/shortcodes/index.xml" rel="self" type="application/rss+xml"/><item><title>Cupper Shortcodes</title><link>https://zl6977.github.io/obsidian/cupper-shortcodes/</link><pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-shortcodes/</guid><description>blockquote {{&amp;lt; blockquote author=&amp;#34;Carl Jung&amp;#34; &amp;gt;}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity. {{&amp;lt; /blockquote &amp;gt;}} Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Shortcodes on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/shortcodes/</link><description>Recent content in Shortcodes on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/shortcodes/index.xml" rel="self" type="application/rss+xml"/><item><title>Cupper Shortcodes</title><link>https://zl6977.github.io/obsidian/cupper-shortcodes/</link><pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-shortcodes/</guid><description>&lt;h2 id="blockquote">blockquote&lt;/h2>
+&lt;pre tabindex="0">&lt;code>{{&amp;lt; blockquote author=&amp;#34;Carl Jung&amp;#34; &amp;gt;}}
+Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
+{{&amp;lt; /blockquote &amp;gt;}}
+&lt;/code>&lt;/pre>
+
+&lt;blockquote class="blockquote">
+ &lt;p>
+ Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
+ 
+ &lt;br>
+ &lt;span class="author">&amp;mdash; Carl Jung&lt;/span>
+ 
+ &lt;/p></description></item></channel></rss>
