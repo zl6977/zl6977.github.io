@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on ZZZ's Blogs</title><link>https://zl6977.github.io/</link><description>Recent content in Home on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 03 Sep 2024 15:48:58 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python requests lib throws SSL error in company network</title><link>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</link><pubDate>Tue, 03 Sep 2024 14:30:16 +0200</pubDate><guid>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</guid><description>&lt;h1 id="python-requests-lib-throws-ssl-error-in-company-network">Python requests lib throws SSL error in company network&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on ZZZ's Blogs</title><link>https://zl6977.github.io/</link><description>Recent content in Home on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 03 Sep 2024 17:41:19 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python requests lib throws SSL error in company network</title><link>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</link><pubDate>Tue, 03 Sep 2024 14:30:16 +0200</pubDate><guid>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</guid><description>&lt;h1 id="python-requests-lib-throws-ssl-error-in-company-network">Python requests lib throws SSL error in company network&lt;/h1>
 &lt;h2 id="short-version简短版">Short version/简短版&lt;/h2>
 &lt;p>Python requests lib is not using the certificate in system certificate manager, which means it can not find a usable certificate like your browser.
 So, the solution is to add the root certificate to the PEM file that python is using. Normally the root certificate is issued by your company, which can be checked in your browser.
@@ -323,7 +323,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-1c89db5c5e501dcce44ed1adb4dbf27f">
+ &lt;button aria-expanded="false" data-expands="js-expandable-eec4cde4bd125f59acc0517f8bd1d4db">
  &lt;span class="expandable-label">expandable 1&lt;/span>
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
  &lt;g transform="translate(0 -981.5)">
@@ -335,7 +335,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2>
  
- &lt;div id="js-expandable-1c89db5c5e501dcce44ed1adb4dbf27f" hidden>
+ &lt;div id="js-expandable-eec4cde4bd125f59acc0517f8bd1d4db" hidden>
  Same inner text.
  &lt;/div>
 &lt;/div>
@@ -349,7 +349,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-5dbccdad1542c7eed9f10de45bb14c8f">
+ &lt;button aria-expanded="false" data-expands="js-expandable-5df4b5e841be5d79120c4bacfdcde1dc">
  &lt;span class="expandable-label">expandable 2&lt;/span>
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
  &lt;g transform="translate(0 -981.5)">
@@ -361,7 +361,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2>
  
- &lt;div id="js-expandable-5dbccdad1542c7eed9f10de45bb14c8f" hidden>
+ &lt;div id="js-expandable-5df4b5e841be5d79120c4bacfdcde1dc" hidden>
  Same inner text.
  &lt;/div>
 &lt;/div>
@@ -375,7 +375,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-c24a90e354f64647019fa24c48ed131d">
+ &lt;button aria-expanded="false" data-expands="js-expandable-f34d444e669c2f08a0e741593a1412dc">
  &lt;span class="expandable-label">expandable 3&lt;/span>
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
  &lt;g transform="translate(0 -981.5)">
@@ -387,7 +387,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2>
  
- &lt;div id="js-expandable-c24a90e354f64647019fa24c48ed131d" hidden>
+ &lt;div id="js-expandable-f34d444e669c2f08a0e741593a1412dc" hidden>
  Different inner text.
  &lt;/div>
 &lt;/div></description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16&lt;/a>&lt;/p>
@@ -506,7 +506,9 @@ Even a happy life cannot be without a measure of darkness, and the word happy wo
  
  &lt;/p></description></item><item><title>Creating a New Theme</title><link>https://zl6977.github.io/obsidian/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
 &lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
-&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>About</title><link>https://zl6977.github.io/about/</link><pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/about/</guid><description>&lt;h2 id="hugo-framework">Hugo framework&lt;/h2>
+&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>About this Github page</title><link>https://zl6977.github.io/about/</link><pubDate>Wed, 09 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/about/</guid><description>&lt;p>It is built based on Hugo framework and Cupper theme, compiled and deployed by Github workflow &lt;a href="https://github.com/marketplace/actions/github-pages-action">github-pages-action&lt;/a>.
+I randomly share some Obsidian notes here.&lt;/p>
+&lt;h2 id="hugo-framework">Hugo framework&lt;/h2>
 &lt;p>Hugo is the &lt;strong>world’s fastest framework for building websites&lt;/strong>. It is written in Go.&lt;/p>
 &lt;p>It makes use of a variety of open source projects including:&lt;/p>
 &lt;ul>
@@ -516,10 +518,7 @@ Even a happy life cannot be without a measure of darkness, and the word happy wo
 &lt;li>&lt;a href="https://github.com/spf13/cobra">https://github.com/spf13/cobra&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://github.com/spf13/viper">https://github.com/spf13/viper&lt;/a>&lt;/li>
 &lt;/ul>
-&lt;p>Learn more and contribute on &lt;a href="https://github.com/gohugoio">GitHub&lt;/a>.&lt;/p>
-&lt;h2 id="cupper-theme">Cupper theme&lt;/h2>
-&lt;p>The cupper theme is an accessibility-friendly Hugo theme, ported from the original Cupper project.&lt;/p>
-&lt;p>It is clean and elegant, making the user focus on the words.&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>https://zl6977.github.io/obsidian/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
+&lt;p>Learn more and contribute on &lt;a href="https://github.com/gohugoio">GitHub&lt;/a>.&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>https://zl6977.github.io/obsidian/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website. If you have used other
