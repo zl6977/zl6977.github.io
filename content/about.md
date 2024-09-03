@@ -1,7 +1,10 @@
 ---
 date: "2014-04-09"
-title: "About"
+title: "About this Github page"
 ---
+
+It is built based on Hugo framework and Cupper theme, compiled and deployed by Github workflow [github-pages-action](https://github.com/marketplace/actions/github-pages-action).
+I randomly share some Obsidian notes here.
 
 ## Hugo framework
 Hugo is the **world’s fastest framework for building websites**. It is written in Go.
@@ -41,6 +44,11 @@ Find it [here](https://github.com/zwbetz-gh/cupper-hugo-theme).
     - 方式2：部署workflow action，生成到gh-page分支，让github使用该分支发布网站。
 4. 代码行间距过大。添加js代码解决：display: flex -> inline.
     - 代码如下，添加至 `themes\cupper-hugo-theme\layouts\partials\script.html`。
+5. Hugo 升级后不支持旧版cupper theme中的某些特征，将它们在各个模板文件中替换即可通过新版hugo (tested on hugo v0.134.0)的编译。
+    - `.Site.DisqusShortname` -> `.Site.Config.Services.Disqus.Shortname`
+    - `.Site.IsServer` -> `hugo.IsServer`
+        - `$.Site.IsServer` -> `hugo.IsServer` in `themes/cupper-hugo-theme/layouts/partials/disqus.html`
+    - `.Site.GoogleAnalytics` -> `.Site.Config.Services.GoogleAnalytics.ID`
 
 
 ```html

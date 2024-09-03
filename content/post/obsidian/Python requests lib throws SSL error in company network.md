@@ -17,7 +17,7 @@ See a solution directly: [[#Solution 2 Alternative fix using a lib]]. I did not 
 This problem does not happen on my personal computer, because there is no proxy generating a self-signed certificate.
 
 Python requests 库没有使用系统自带的证书管理器。这意味着他不能像浏览器一样找到一个有效的证书。
-所以，解决方案是添加一个可用的根证书在python正在用的PEM文件。这个根证书通常是你的公司签发的，可以在你的浏览器中查看。
+所以，解决方案是添加一个可用的根证书到Python正在用的PEM文件。这个根证书通常是你的公司签发的，可以在你的浏览器中查看。
 这样，一个Python requests 库可用的认证链就建立了。
 方法直接看: [[#Solution 2 Alternative fix using a lib]]。 我没试这个，不过应该可以。如果不行，就看 [[#Solution 1 Manual fix]]。
 在我个人电脑上没这个问题，应该是因为没有代理在中间生成了一个自签名证书。
@@ -36,7 +36,7 @@ response = requests.get('https://chroma-onnx-models.s3.amazonaws.com/all-MiniLM-
 Run this code, returning:
 ```bash
   ......
-  File "C:\Users\lizh\AppData\Local\Anaconda3-2024.02\Lib\site-packages\requests\adapters.py", line 620, in send
+  File "C:\Users\xxx\AppData\Local\Anaconda3-2024.02\Lib\site-packages\requests\adapters.py", line 620, in send
     raise SSLError(e, request=request)
 requests.exceptions.SSLError: HTTPSConnectionPool(host='chroma-onnx-models.s3.amazonaws.com', port=443): Max retries exceeded with url: /all-MiniLM-L6-v2/onnx.tar.gz (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1006)')))
 ```

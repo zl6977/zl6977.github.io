@@ -42,7 +42,7 @@ menu:
     - name: Home
       url: /
       weight: 1
-    - name: Blog
+    - name: Blogs
       url: /post/
       weight: 2
     - name: Tags
