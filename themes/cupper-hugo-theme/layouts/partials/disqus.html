@@ -1,9 +1,9 @@
 <div id="disqus-container">
-  {{ with .Site.DisqusShortname }}
+  {{ with .Site.Config.Services.Disqus.Shortname }}
     <button id="disqus-button" onclick="showComments()">{{ T "discuss_show_comments_button" }}</button>
     <div id="disqus-comments">
       {{ $isDummyName := eq . "yourdiscussshortname" }}
-      {{ $isServer := $.Site.IsServer }}
+      {{ $isServer := hugo.IsServer }}
       {{ if or $isDummyName $isServer }}
         <p><em>{{ T "discuss_comments_disabled" }}</em></p>
         <script type="application/javascript">
