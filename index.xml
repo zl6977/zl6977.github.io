@@ -1,10 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on ZZZ's Blogs</title><link>https://zl6977.github.io/</link><description>Recent content in Home on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 03 Sep 2024 17:41:19 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python requests lib throws SSL error in company network</title><link>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</link><pubDate>Tue, 03 Sep 2024 14:30:16 +0200</pubDate><guid>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</guid><description>&lt;h1 id="python-requests-lib-throws-ssl-error-in-company-network">Python requests lib throws SSL error in company network&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on ZZZ's Blogs</title><link>https://zl6977.github.io/</link><description>Recent content in Home on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 04 Sep 2024 12:50:35 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Python requests lib throws SSL error in company network</title><link>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</link><pubDate>Tue, 03 Sep 2024 14:30:16 +0200</pubDate><guid>https://zl6977.github.io/obsidian/python-requests-lib-throws-ssl-error-in-company-network/</guid><description>&lt;h1 id="python-requests-lib-throws-ssl-error-in-company-network">Python requests lib throws SSL error in company network&lt;/h1>
 &lt;h2 id="short-version简短版">Short version/简短版&lt;/h2>
-&lt;p>Python requests lib is not using the certificate in system certificate manager, which means it can not find a usable certificate like your browser.
-So, the solution is to add the root certificate to the PEM file that python is using. Normally the root certificate is issued by your company, which can be checked in your browser.
-Then a working verification chain for python requests lib can be established.
-See a solution directly: [[#Solution 2 Alternative fix using a lib]]. I did not not try with this. If it does not work, use [[#Solution 1 Manual fix]].
-This problem does not happen on my personal computer, because there is no proxy generating a self-signed certificate.&lt;/p></description></item><item><title>在线网络工具收集</title><link>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</link><pubDate>Fri, 03 May 2024 18:00:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</guid><description>&lt;h1 id="ip地址--ipv6网站检测">IP地址 &amp;amp; IPv6网站检测&lt;/h1>
+&lt;p>Accessing an HTTPS URL using the Python requests library throws a self-signed error. However, accessing the URL in a browser is fine, and also fine on a private computer.
+Based on Copilot&amp;rsquo;s answer, I understand that the root cause is proxy server interception and different clients using different certificate storage locations. This means that different certificate chains are created in different scenarios, some are valid and some are not.
+The proxy server modifies the original certificate returned from the HTTPS server to generate a new certificate. This new certificate points to the proxy, and eventually to company&amp;rsquo;s root certificate.
+This root certificate is self-signed and exists in the system&amp;rsquo;s own certificate manager, but not in the certificate manager used by the Python requests library. That&amp;rsquo;s why the Python requests library is prompting for a “self-signed cert error”.
+So the solution is to add your company&amp;rsquo;s root certificate (which is the self-signed certificate that the requests lib prompts for) to the PEM file that Python is using, in order to make the new certificate chain valid.
+A simple solution is: [[#Solution 2 Installing a lib]]. I did not try this, but it should work. If it doesn&amp;rsquo;t work, look at [[#Solution 1 Manual fix]].&lt;/p></description></item><item><title>在线网络工具收集</title><link>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</link><pubDate>Fri, 03 May 2024 18:00:00 +0200</pubDate><guid>https://zl6977.github.io/obsidian/%E5%9C%A8%E7%BA%BF%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7%E6%94%B6%E9%9B%86/</guid><description>&lt;h1 id="ip地址--ipv6网站检测">IP地址 &amp;amp; IPv6网站检测&lt;/h1>
 &lt;p>测试本机是否可以用ipv6网络访问公网：
 &lt;a href="https://test-ipv6.com/">https://test-ipv6.com/&lt;/a>&lt;/p>
 &lt;p>检测IPv4和IPv6地址：
@@ -323,7 +324,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-5d1e9bd2c514c1ef74acb504dbcdf8ed">
+ &lt;button aria-expanded="false" data-expands="js-expandable-dcb9edccf0c5ea541db4d1e8b51df724">
  &lt;span class="expandable-label">expandable 1&lt;/span>
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
  &lt;g transform="translate(0 -981.5)">
@@ -335,7 +336,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2>
  
- &lt;div id="js-expandable-5d1e9bd2c514c1ef74acb504dbcdf8ed" hidden>
+ &lt;div id="js-expandable-dcb9edccf0c5ea541db4d1e8b51df724" hidden>
  Same inner text.
  &lt;/div>
 &lt;/div>
@@ -349,7 +350,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-14e54edb85ddab20bcc54dfcef971dc1">
+ &lt;button aria-expanded="false" data-expands="js-expandable-dd10cdcd5bb115cd9454847cfea2efeb">
  &lt;span class="expandable-label">expandable 2&lt;/span>
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
  &lt;g transform="translate(0 -981.5)">
@@ -361,7 +362,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2>
  
- &lt;div id="js-expandable-14e54edb85ddab20bcc54dfcef971dc1" hidden>
+ &lt;div id="js-expandable-dd10cdcd5bb115cd9454847cfea2efeb" hidden>
  Same inner text.
  &lt;/div>
 &lt;/div>
@@ -375,7 +376,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-f94f844915ac741a04d332e60dce1624">
+ &lt;button aria-expanded="false" data-expands="js-expandable-73e9f4534d6c0aa4122d401448e96cf1">
  &lt;span class="expandable-label">expandable 3&lt;/span>
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
  &lt;g transform="translate(0 -981.5)">
@@ -387,7 +388,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2>
  
- &lt;div id="js-expandable-f94f844915ac741a04d332e60dce1624" hidden>
+ &lt;div id="js-expandable-73e9f4534d6c0aa4122d401448e96cf1" hidden>
  Different inner text.
  &lt;/div>
 &lt;/div></description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16&lt;/a>&lt;/p>
