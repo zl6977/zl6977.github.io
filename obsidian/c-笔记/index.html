@@ -1,4 +1,4 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Hugo 0.134.0"><link rel=canonical href=https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/><meta name=description content="#程序员
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=generator content="Hugo 0.134.1"><link rel=canonical href=https://zl6977.github.io/obsidian/c-%E7%AC%94%E8%AE%B0/><meta name=description content="#程序员
 Essential C++ #someday ✅ 2022-04-18 1 编程基础 很快就看完了，其中的文件操作不是很熟练，但应该不难。
 2 面向过程的编程风格。 指针(pointer)与引用(reference) pointer参数和reference参数二者之间功能类似，用法略有不同，更重要的差异是：
 pointer 可能为空，不指向实际对象。当我们提领pointer时，一定要先确定其值并非为0。 而对于reference，其必然指向某个对象，所以不须做此检查。 若需要更改原变量，需要传址，以下两者皆可： function(int& inPara); function(int* inParaPt); 若不需要更改原变量，只需传值，以下两者皆可： function(int inPara); function(const int& inPara); //此方法不需要在内存中复制一份原变量。
