@@ -1,90 +1,90 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Issue on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/issue/</link><description>Recent content in Issue on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/issue/index.xml" rel="self" type="application/rss+xml"/><item><title>cmd Test</title><link>https://zl6977.github.io/obsidian/cmd-test/</link><pubDate>Tue, 04 Aug 2020 21:05:05 -0500</pubDate><guid>https://zl6977.github.io/obsidian/cmd-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42&lt;/a>&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Issue on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/issue/</link><description>Recent content in Issue on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/issue/index.xml" rel="self" type="application/rss+xml"/><item><title>cmd Test</title><link>https://zl6977.github.io/obsidian/cmd-test/</link><pubDate>Tue, 04 Aug 2020 21:05:05 -0500</pubDate><guid>https://zl6977.github.io/obsidian/cmd-test/</guid><description>&lt;p&gt;Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42"&gt;https://github.com/zwbetz-gh/cupper-hugo-theme/issues/42&lt;/a&gt;&lt;/p&gt;
 
 
-&lt;pre class="cmd">
+&lt;pre class="cmd"&gt;
  
- &lt;code>Line 1&lt;/code>
+ &lt;code&gt;Line 1&lt;/code&gt;
  
- &lt;code>Line 2&lt;/code>
+ &lt;code&gt;Line 2&lt;/code&gt;
  
- &lt;code>Line 3&lt;/code>
+ &lt;code&gt;Line 3&lt;/code&gt;
  
-&lt;/pre></description></item><item><title>Multiple Expandable Test</title><link>https://zl6977.github.io/obsidian/multiple-expandable-test/</link><pubDate>Wed, 17 Jun 2020 22:01:14 -0500</pubDate><guid>https://zl6977.github.io/obsidian/multiple-expandable-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36&lt;/a> &amp;ndash; Multiple expandable shortcodes do not work if they have the same inner text.&lt;/p>
-&lt;div class="expandable-section">
+&lt;/pre&gt;</description></item><item><title>Multiple Expandable Test</title><link>https://zl6977.github.io/obsidian/multiple-expandable-test/</link><pubDate>Wed, 17 Jun 2020 22:01:14 -0500</pubDate><guid>https://zl6977.github.io/obsidian/multiple-expandable-test/</guid><description>&lt;p&gt;Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36"&gt;https://github.com/zwbetz-gh/cupper-hugo-theme/issues/36&lt;/a&gt; &amp;ndash; Multiple expandable shortcodes do not work if they have the same inner text.&lt;/p&gt;
+&lt;div class="expandable-section"&gt;
  
- &lt;h2>
- 
- 
+ &lt;h2&gt;
  
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-44d978cb55ef4a0cbddefdec512cb1d1">
- &lt;span class="expandable-label">expandable 1&lt;/span>
- &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
- &lt;g transform="translate(0 -981.5)">
- &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
- &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
- &lt;/g>
- &lt;/svg>
- &lt;/button>
  
- &lt;/h2>
  
- &lt;div id="js-expandable-44d978cb55ef4a0cbddefdec512cb1d1" hidden>
+ &lt;button aria-expanded="false" data-expands="js-expandable-fc2d19d4ea0ce78451dbfd41bbd55cec"&gt;
+ &lt;span class="expandable-label"&gt;expandable 1&lt;/span&gt;
+ &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141"&gt;
+ &lt;g transform="translate(0 -981.5)"&gt;
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" /&gt;
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/&gt;
+ &lt;/g&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ 
+ &lt;/h2&gt;
+ 
+ &lt;div id="js-expandable-fc2d19d4ea0ce78451dbfd41bbd55cec" hidden&gt;
  Same inner text.
- &lt;/div>
-&lt;/div>
+ &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="expandable-section">
+&lt;div class="expandable-section"&gt;
  
- &lt;h2>
- 
- 
+ &lt;h2&gt;
  
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-d5bd24ccabce14940fceb5d8d7e5f11d">
- &lt;span class="expandable-label">expandable 2&lt;/span>
- &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
- &lt;g transform="translate(0 -981.5)">
- &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
- &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
- &lt;/g>
- &lt;/svg>
- &lt;/button>
  
- &lt;/h2>
  
- &lt;div id="js-expandable-d5bd24ccabce14940fceb5d8d7e5f11d" hidden>
+ &lt;button aria-expanded="false" data-expands="js-expandable-51dd1dfcc4b29de4cecabe7105b4fd85"&gt;
+ &lt;span class="expandable-label"&gt;expandable 2&lt;/span&gt;
+ &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141"&gt;
+ &lt;g transform="translate(0 -981.5)"&gt;
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" /&gt;
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/&gt;
+ &lt;/g&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ 
+ &lt;/h2&gt;
+ 
+ &lt;div id="js-expandable-51dd1dfcc4b29de4cecabe7105b4fd85" hidden&gt;
  Same inner text.
- &lt;/div>
-&lt;/div>
+ &lt;/div&gt;
+&lt;/div&gt;
 
-&lt;div class="expandable-section">
+&lt;div class="expandable-section"&gt;
  
- &lt;h2>
- 
- 
+ &lt;h2&gt;
  
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-5c09ff2401d474c824ae9ade46641313">
- &lt;span class="expandable-label">expandable 3&lt;/span>
- &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141">
- &lt;g transform="translate(0 -981.5)">
- &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" />
- &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/>
- &lt;/g>
- &lt;/svg>
- &lt;/button>
  
- &lt;/h2>
  
- &lt;div id="js-expandable-5c09ff2401d474c824ae9ade46641313" hidden>
+ &lt;button aria-expanded="false" data-expands="js-expandable-22c0a1f183a1494e65c9f0ed64434d74"&gt;
+ &lt;span class="expandable-label"&gt;expandable 3&lt;/span&gt;
+ &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141"&gt;
+ &lt;g transform="translate(0 -981.5)"&gt;
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="60" width="9.8985" y="987.36" x="30.051" class="up-strut" /&gt;
+ &lt;rect style="stroke-width:0;fill:currentColor" ry="5" height="10" width="60" y="1012.4" x="5"/&gt;
+ &lt;/g&gt;
+ &lt;/svg&gt;
+ &lt;/button&gt;
+ 
+ &lt;/h2&gt;
+ 
+ &lt;div id="js-expandable-22c0a1f183a1494e65c9f0ed64434d74" hidden&gt;
  Different inner text.
- &lt;/div>
-&lt;/div></description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>&lt;p>Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16">https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16&lt;/a>&lt;/p>
-&lt;p>Cette phrase prononcée par Greta Thunberg&lt;/p></description></item></channel></rss>
+ &lt;/div&gt;
+&lt;/div&gt;</description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>&lt;p&gt;Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16"&gt;https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Cette phrase prononcée par Greta Thunberg&lt;/p&gt;</description></item></channel></rss>

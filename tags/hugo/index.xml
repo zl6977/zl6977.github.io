@@ -1,71 +1,85 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/hugo/</link><description>Recent content in Hugo on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Katex Math Typesetting</title><link>https://zl6977.github.io/obsidian/katex-math-typesetting/</link><pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/katex-math-typesetting/</guid><description>&lt;p>Enable Katex in the config file by setting the &lt;code>katex&lt;/code> param to &lt;code>true&lt;/code>. This will import the necessary Katex CSS/JS.&lt;/p>
-&lt;p>&lt;strong>Note:&lt;/strong> Use the online reference of &lt;a href="https://katex.org/docs/supported.html">supported TeX functions&lt;/a>.&lt;/p>
-&lt;p>Some math:&lt;/p>
-&lt;pre tabindex="0">&lt;code>$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
-&lt;/code>&lt;/pre>&lt;p>$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$&lt;/p>
-&lt;p>More math:&lt;/p>
-&lt;pre tabindex="0">&lt;code>$$
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Hugo on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/hugo/</link><description>Recent content in Hugo on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml"/><item><title>Katex Math Typesetting</title><link>https://zl6977.github.io/obsidian/katex-math-typesetting/</link><pubDate>Thu, 28 Mar 2019 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/katex-math-typesetting/</guid><description>&lt;p&gt;Enable Katex in the config file by setting the &lt;code&gt;katex&lt;/code&gt; param to &lt;code&gt;true&lt;/code&gt;. This will import the necessary Katex CSS/JS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; Use the online reference of &lt;a href="https://katex.org/docs/supported.html"&gt;supported TeX functions&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Some math:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$$ \varphi = \dfrac{1+\sqrt5}{2}= 1.6180339887… $$&lt;/p&gt;
+&lt;p&gt;More math:&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;$$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } } 
 $$
-&lt;/code>&lt;/pre>&lt;p>$$
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;$$
 \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$&lt;/p></description></item><item><title>Cupper Typography</title><link>https://zl6977.github.io/obsidian/cupper-typography/</link><pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-typography/</guid><description>&lt;h2 id="headings">Headings&lt;/h2>
-&lt;pre tabindex="0">&lt;code>## Heading 2
+$$&lt;/p&gt;</description></item><item><title>Cupper Typography</title><link>https://zl6977.github.io/obsidian/cupper-typography/</link><pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-typography/</guid><description>&lt;h2 id="headings"&gt;Headings&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-&lt;/code>&lt;/pre>&lt;h2 id="heading-2">Heading 2&lt;/h2>
-&lt;h3 id="heading-3">Heading 3&lt;/h3>
-&lt;h4 id="heading-4">Heading 4&lt;/h4>
-&lt;h5 id="heading-5">Heading 5&lt;/h5>
-&lt;h6 id="heading-6">Heading 6&lt;/h6>
-&lt;h2 id="text">Text&lt;/h2>
-&lt;pre tabindex="0">&lt;code>*This text will be italic*
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="heading-2"&gt;Heading 2&lt;/h2&gt;
+&lt;h3 id="heading-3"&gt;Heading 3&lt;/h3&gt;
+&lt;h4 id="heading-4"&gt;Heading 4&lt;/h4&gt;
+&lt;h5 id="heading-5"&gt;Heading 5&lt;/h5&gt;
+&lt;h6 id="heading-6"&gt;Heading 6&lt;/h6&gt;
+&lt;h2 id="text"&gt;Text&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;*This text will be italic*
 _This will also be italic_
 
 **This text will be bold**
 __This will also be bold__
 
 _You **can** combine them_
-&lt;/code>&lt;/pre>&lt;p>&lt;em>This text will be italic&lt;/em>&lt;/p>
-&lt;p>&lt;em>This will also be italic&lt;/em>&lt;/p></description></item><item><title>Cupper Shortcodes</title><link>https://zl6977.github.io/obsidian/cupper-shortcodes/</link><pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-shortcodes/</guid><description>&lt;h2 id="blockquote">blockquote&lt;/h2>
-&lt;pre tabindex="0">&lt;code>{{&amp;lt; blockquote author=&amp;#34;Carl Jung&amp;#34; &amp;gt;}}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;This text will be italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This will also be italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This text will be bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This will also be bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;You &lt;strong&gt;can&lt;/strong&gt; combine them&lt;/em&gt;&lt;/p&gt;</description></item><item><title>Cupper Shortcodes</title><link>https://zl6977.github.io/obsidian/cupper-shortcodes/</link><pubDate>Tue, 12 Feb 2019 23:39:06 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-shortcodes/</guid><description>&lt;h2 id="blockquote"&gt;blockquote&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;{{&amp;lt; blockquote author=&amp;#34;Carl Jung&amp;#34; &amp;gt;}}
 Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
 {{&amp;lt; /blockquote &amp;gt;}}
-&lt;/code>&lt;/pre>
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;blockquote class="blockquote">
- &lt;p>
+&lt;blockquote class="blockquote"&gt;
+ &lt;p&gt;
  Even a happy life cannot be without a measure of darkness, and the word happy would lose its meaning if it were not balanced by sadness. It is far better to take things as they come along with patience and equanimity.
  
- &lt;br>
- &lt;span class="author">&amp;mdash; Carl Jung&lt;/span>
+ &lt;br&gt;
+ &lt;span class="author"&gt;&amp;mdash; Carl Jung&lt;/span&gt;
  
- &lt;/p></description></item><item><title>Creating a New Theme</title><link>https://zl6977.github.io/obsidian/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/creating-a-new-theme/</guid><description>&lt;h2 id="introduction">Introduction&lt;/h2>
-&lt;p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p>
-&lt;p>We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p></description></item><item><title>(Hu)go Template Primer</title><link>https://zl6977.github.io/obsidian/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/goisforlovers/</guid><description>&lt;p>Hugo uses the excellent &lt;a href="https://golang.org/">Go&lt;/a> &lt;a href="https://golang.org/pkg/html/template/">html/template&lt;/a> library for
+ &lt;/p&gt;</description></item><item><title>Creating a New Theme</title><link>https://zl6977.github.io/obsidian/creating-a-new-theme/</link><pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/creating-a-new-theme/</guid><description>&lt;h2 id="introduction"&gt;Introduction&lt;/h2&gt;
+&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ll start with creating a new site with a very basic template. Then we&amp;rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.&lt;/p&gt;</description></item><item><title>(Hu)go Template Primer</title><link>https://zl6977.github.io/obsidian/goisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/goisforlovers/</guid><description>&lt;p&gt;Hugo uses the excellent &lt;a href="https://golang.org/"&gt;Go&lt;/a&gt; &lt;a href="https://golang.org/pkg/html/template/"&gt;html/template&lt;/a&gt; library for
 its template engine. It is an extremely lightweight engine that provides a very
 small amount of logic. In our experience that it is just the right amount of
 logic to be able to create a good static website. If you have used other
 template systems from different languages or frameworks you will find a lot of
-similarities in Go templates.&lt;/p></description></item><item><title>Getting Started with Hugo</title><link>https://zl6977.github.io/obsidian/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo">Step 1. Install Hugo&lt;/h2>
-&lt;p>Go to &lt;a href="https://github.com/spf13/hugo/releases">Hugo releases&lt;/a> and download the
-appropriate version for your OS and architecture.&lt;/p>
-&lt;p>Save it somewhere specific as we will be using it in the next step.&lt;/p>
-&lt;p>More complete instructions are available at &lt;a href="https://gohugo.io/getting-started/installing/">Install Hugo&lt;/a>&lt;/p>
-&lt;h2 id="step-2-build-the-docs">Step 2. Build the Docs&lt;/h2>
-&lt;p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.&lt;/p></description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://zl6977.github.io/obsidian/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static">Move static content to &lt;code>static&lt;/code>&lt;/h2>
-&lt;p>Jekyll has a rule that any directory not starting with &lt;code>_&lt;/code> will be copied as-is to the &lt;code>_site&lt;/code> output. Hugo keeps all static content under &lt;code>static&lt;/code>. You should therefore move it all there.
-With Jekyll, something that looked like&lt;/p>
-&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+similarities in Go templates.&lt;/p&gt;
+&lt;p&gt;This document is a brief primer on using Go templates. The &lt;a href="https://golang.org/pkg/html/template/"&gt;Go docs&lt;/a&gt;
+provide more details.&lt;/p&gt;</description></item><item><title>Getting Started with Hugo</title><link>https://zl6977.github.io/obsidian/hugoisforlovers/</link><pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/hugoisforlovers/</guid><description>&lt;h2 id="step-1-install-hugo"&gt;Step 1. Install Hugo&lt;/h2&gt;
+&lt;p&gt;Go to &lt;a href="https://github.com/spf13/hugo/releases"&gt;Hugo releases&lt;/a&gt; and download the
+appropriate version for your OS and architecture.&lt;/p&gt;
+&lt;p&gt;Save it somewhere specific as we will be using it in the next step.&lt;/p&gt;
+&lt;p&gt;More complete instructions are available at &lt;a href="https://gohugo.io/getting-started/installing/"&gt;Install Hugo&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id="step-2-build-the-docs"&gt;Step 2. Build the Docs&lt;/h2&gt;
+&lt;p&gt;Hugo has its own example site which happens to also be the documentation site
+you are reading right now.&lt;/p&gt;
+&lt;p&gt;Follow the following steps:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Clone the &lt;a href="http://github.com/spf13/hugo"&gt;Hugo repository&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Go into the repo&lt;/li&gt;
+&lt;li&gt;Run hugo in server mode and build the docs&lt;/li&gt;
+&lt;li&gt;Open your browser to http://localhost:1313&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Corresponding pseudo commands:&lt;/p&gt;</description></item><item><title>Migrate to Hugo from Jekyll</title><link>https://zl6977.github.io/obsidian/migrate-from-jekyll/</link><pubDate>Mon, 10 Mar 2014 00:00:00 +0000</pubDate><guid>https://zl6977.github.io/obsidian/migrate-from-jekyll/</guid><description>&lt;h2 id="move-static-content-to-static"&gt;Move static content to &lt;code&gt;static&lt;/code&gt;&lt;/h2&gt;
+&lt;p&gt;Jekyll has a rule that any directory not starting with &lt;code&gt;_&lt;/code&gt; will be copied as-is to the &lt;code&gt;_site&lt;/code&gt; output. Hugo keeps all static content under &lt;code&gt;static&lt;/code&gt;. You should therefore move it all there.
+With Jekyll, something that looked like&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
  ▾ images/
  logo.png
-&lt;/code>&lt;/pre>
-&lt;p>should become&lt;/p>
-&lt;pre>&lt;code>▾ &amp;lt;root&amp;gt;/
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;should become&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;▾ &amp;lt;root&amp;gt;/
  ▾ static/
  ▾ images/
  logo.png
-&lt;/code>&lt;/pr</description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Additionally, you&amp;rsquo;ll want any files that should reside at the root (such as &lt;code&gt;CNAME&lt;/code&gt;) to be moved to &lt;code&gt;static&lt;/code&gt;.&lt;/p&gt;</description></item></channel></rss>

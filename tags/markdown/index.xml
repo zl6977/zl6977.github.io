@@ -1,21 +1,24 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/markdown/</link><description>Recent content in Markdown on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Cupper Typography</title><link>https://zl6977.github.io/obsidian/cupper-typography/</link><pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-typography/</guid><description>&lt;h2 id="headings">Headings&lt;/h2>
-&lt;pre tabindex="0">&lt;code>## Heading 2
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Markdown on ZZZ's Blogs</title><link>https://zl6977.github.io/tags/markdown/</link><description>Recent content in Markdown on ZZZ's Blogs</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 07 Sep 2022 23:13:22 +0200</lastBuildDate><atom:link href="https://zl6977.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml"/><item><title>Cupper Typography</title><link>https://zl6977.github.io/obsidian/cupper-typography/</link><pubDate>Thu, 14 Feb 2019 15:36:09 -0600</pubDate><guid>https://zl6977.github.io/obsidian/cupper-typography/</guid><description>&lt;h2 id="headings"&gt;Headings&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;## Heading 2
 ### Heading 3
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
-&lt;/code>&lt;/pre>&lt;h2 id="heading-2">Heading 2&lt;/h2>
-&lt;h3 id="heading-3">Heading 3&lt;/h3>
-&lt;h4 id="heading-4">Heading 4&lt;/h4>
-&lt;h5 id="heading-5">Heading 5&lt;/h5>
-&lt;h6 id="heading-6">Heading 6&lt;/h6>
-&lt;h2 id="text">Text&lt;/h2>
-&lt;pre tabindex="0">&lt;code>*This text will be italic*
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="heading-2"&gt;Heading 2&lt;/h2&gt;
+&lt;h3 id="heading-3"&gt;Heading 3&lt;/h3&gt;
+&lt;h4 id="heading-4"&gt;Heading 4&lt;/h4&gt;
+&lt;h5 id="heading-5"&gt;Heading 5&lt;/h5&gt;
+&lt;h6 id="heading-6"&gt;Heading 6&lt;/h6&gt;
+&lt;h2 id="text"&gt;Text&lt;/h2&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;*This text will be italic*
 _This will also be italic_
 
 **This text will be bold**
 __This will also be bold__
 
 _You **can** combine them_
-&lt;/code>&lt;/pre>&lt;p>&lt;em>This text will be italic&lt;/em>&lt;/p>
-&lt;p>&lt;em>This will also be italic&lt;/em>&lt;/p></description></item></channel></rss>
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;em&gt;This text will be italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;This will also be italic&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This text will be bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This will also be bold&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;You &lt;strong&gt;can&lt;/strong&gt; combine them&lt;/em&gt;&lt;/p&gt;</description></item></channel></rss>
