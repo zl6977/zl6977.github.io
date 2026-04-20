@@ -9,10 +9,10 @@ A simple solution is: [[#Solution 2 Installing a lib]]. I did not try this, but 
 &lt;p&gt;测试本机是否可以用ipv6网络访问公网：
 &lt;a href="https://test-ipv6.com/"&gt;https://test-ipv6.com/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;检测IPv4和IPv6地址：
-&lt;a href="https://www.whatismyip.com/"&gt;https://www.whatismyip.com/&lt;/a&gt;
+&lt;a href="https://www.whatismyip.com/"&gt;https://www.whatismyip.com/&lt;/a&gt;,
 &lt;a href="https://www.pingloc.com/ip-query"&gt;https://www.pingloc.com/ip-query&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;检测网站是否可访问(拨测工具)：
-&lt;a href="https://boce.aliyun.com/detect/http"&gt;https://boce.aliyun.com/detect/http&lt;/a&gt;
+&lt;a href="https://boce.aliyun.com/detect/http"&gt;https://boce.aliyun.com/detect/http&lt;/a&gt;,
 &lt;a href="https://www.pingloc.com/tcp-ping"&gt;https://www.pingloc.com/tcp-ping&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id="ipv6-online-port-scanner"&gt;IPv6 Online Port Scanner&lt;/h1&gt;
 &lt;p&gt;很好用的在线端口扫描工具，支持IPv6：
@@ -369,7 +369,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-fc2d19d4ea0ce78451dbfd41bbd55cec"&gt;
+ &lt;button aria-expanded="false" data-expands="js-expandable-de4ffe5edbd9b5cc0ccdd18421b4a751"&gt;
  &lt;span class="expandable-label"&gt;expandable 1&lt;/span&gt;
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141"&gt;
  &lt;g transform="translate(0 -981.5)"&gt;
@@ -381,7 +381,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2&gt;
  
- &lt;div id="js-expandable-fc2d19d4ea0ce78451dbfd41bbd55cec" hidden&gt;
+ &lt;div id="js-expandable-de4ffe5edbd9b5cc0ccdd18421b4a751" hidden&gt;
  Same inner text.
  &lt;/div&gt;
 &lt;/div&gt;
@@ -395,7 +395,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-51dd1dfcc4b29de4cecabe7105b4fd85"&gt;
+ &lt;button aria-expanded="false" data-expands="js-expandable-18457110b9c4cdbbfee4a25cedf5dcdd"&gt;
  &lt;span class="expandable-label"&gt;expandable 2&lt;/span&gt;
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141"&gt;
  &lt;g transform="translate(0 -981.5)"&gt;
@@ -407,7 +407,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2&gt;
  
- &lt;div id="js-expandable-51dd1dfcc4b29de4cecabe7105b4fd85" hidden&gt;
+ &lt;div id="js-expandable-18457110b9c4cdbbfee4a25cedf5dcdd" hidden&gt;
  Same inner text.
  &lt;/div&gt;
 &lt;/div&gt;
@@ -421,7 +421,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  
  
- &lt;button aria-expanded="false" data-expands="js-expandable-22c0a1f183a1494e65c9f0ed64434d74"&gt;
+ &lt;button aria-expanded="false" data-expands="js-expandable-d64af281e543d143c49a40169ce4720f"&gt;
  &lt;span class="expandable-label"&gt;expandable 3&lt;/span&gt;
  &lt;svg aria-hidden="true" focusable="false" viewBox="0 0 70.866142 70.866141"&gt;
  &lt;g transform="translate(0 -981.5)"&gt;
@@ -433,7 +433,7 @@ function(const int&amp;amp; inPara); //此方法不需要在内存中复制一�
  
  &lt;/h2&gt;
  
- &lt;div id="js-expandable-22c0a1f183a1494e65c9f0ed64434d74" hidden&gt;
+ &lt;div id="js-expandable-d64af281e543d143c49a40169ce4720f" hidden&gt;
  Different inner text.
  &lt;/div&gt;
 &lt;/div&gt;</description></item><item><title>Special Character Test</title><link>https://zl6977.github.io/obsidian/special-character-test/</link><pubDate>Tue, 10 Sep 2019 20:26:08 -0500</pubDate><guid>https://zl6977.github.io/obsidian/special-character-test/</guid><description>&lt;p&gt;Testing out GitHub issue &lt;a href="https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16"&gt;https://github.com/zwbetz-gh/cupper-hugo-theme/issues/16&lt;/a&gt;&lt;/p&gt;
