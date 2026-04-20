@@ -1,4 +1,4 @@
-{{ $JSON := $.Site.Data.wcag }}
+{{ $JSON := hugo.Data.wcag }}
 {{ $included := replace (.Get "include") ", " "," }}
 {{ $included := split $included "," }}
 {{ $descriptions := .Get "descriptions" }}

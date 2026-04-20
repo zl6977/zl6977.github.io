@@ -1,4 +1,4 @@
-{{ $JSON := $.Site.Data.principles }}
+{{ $JSON := hugo.Data.principles }}
 {{ $included := replace (.Get "include") ", " "," }}
 {{ $included := apply (split $included ",") "lower" "." }}
 {{ $descriptions := .Get "descriptions" }}
